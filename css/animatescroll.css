@@ -1,0 +1,46 @@
+/* Animations only for screens wider than 768px */
+@media (min-width: 768px) {
+
+  /* Animations (initial state) */
+  .fade-in { opacity:0; transform: translateY(40px); transition: all 0.8s ease; }
+  .slide-left { opacity:0; transform: translateX(-60px); transition: all 0.8s ease; }
+  .slide-right { opacity:0; transform: translateX(60px); transition: all 0.8s ease; }
+  .zoom-in { opacity:0; transform: scale(0.8); transition: all 0.8s ease; }
+  .zoom-out { opacity:0; transform: scale(1.2); transition: all 0.8s ease; }
+  .flip-up { opacity:0; transform: rotateX(90deg); transform-origin: bottom; transition: all 0.8s ease; }
+  .flip-down { opacity:0; transform: rotateX(-90deg); transform-origin: top; transition: all 0.8s ease; }
+  .flip-left { opacity:0; transform: rotateY(90deg); transform-origin: left; transition: all 0.8s ease; }
+  .flip-right { opacity:0; transform: rotateY(-90deg); transform-origin: right; transition: all 0.8s ease; }
+  .fade-up { opacity:0; transform: translateY(40px); transition: all 0.8s ease; }
+  .fade-down { opacity:0; transform: translateY(-40px); transition: all 0.8s ease; }
+  .rotate { opacity:0; transform: rotate(-45deg); transition: all 0.8s ease; }
+  .skew { opacity:0; transform: skewY(10deg); transition: all 0.8s ease; }
+  .blur { opacity:0; filter: blur(10px); transition: all 0.8s ease; }
+  .bounce { opacity:0; transform: translateY(80px); }
+
+  /* Active states */
+  .active-section { transform: none !important; opacity: 1 !important; filter: none !important; }
+
+  /* Bounce special */
+  .bounce.active-section {
+    animation: bounceIn 1s ease forwards;
+  }
+  @keyframes bounceIn {
+    0%   { transform: translateY(80px); opacity: 0; }
+    60%  { transform: translateY(-20px); opacity: 1; }
+    80%  { transform: translateY(10px); }
+    100% { transform: translateY(0); }
+  }
+}
+
+/* Accessibility (still applies everywhere) */
+@media (prefers-reduced-motion: reduce) {
+  .fade-in, .slide-left, .slide-right, .zoom-in, .zoom-out, .flip-up, .flip-down, .flip-left, .flip-right,
+  .fade-up, .fade-down, .rotate, .skew, .blur, .bounce {
+    transition: none !important;
+    transform: none !important;
+    opacity: 1 !important;
+    animation: none !important;
+    filter: none !important;
+  }
+}

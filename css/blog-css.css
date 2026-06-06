@@ -1,0 +1,202 @@
+.site-header span.site-title {
+    display: none
+}
+
+.ast-custom-button {
+    padding: 8px 14px !important;
+    font-size: .85rem;
+    background-color: #fff;
+    border: 1px solid #1f4985;
+    color: #1f4985;
+    border-radius: 40px;
+    transition: background-color .4s, color .4s;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    min-width: 100px;
+    text-align: center
+}
+
+.ast-custom-button:hover::before {
+    filter: invert(1)
+}
+
+.ast-custom-button::before {
+    content: "";
+    position: absolute;
+    left: 7px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    background: url(https://blog.rotai.in/wp-content/uploads/2026/02/arrow-ic.png) center/contain no-repeat
+}
+
+.site-header {
+    position: sticky;
+    top: 0
+}
+
+.navbar-brand {
+    display: block !important
+}
+
+a.nav-link {
+    color: #000000a6;
+    font-weight: 600;
+    font-size: 18px
+}
+
+body.archive .ast-archive-description {
+    padding: 16px !important;
+    border-radius: 10px
+}
+
+.sidebar-main .ez-toc-widget-sticky-container ul li a {
+    padding: 10px !important;
+    border-radius: 10px
+}
+
+.sidebar-main .ez-toc-widget-sticky-container ul li {
+    margin: 0 !important
+}
+
+#ez-toc-container {
+    display: none !important
+}
+
+.sidebar-main .wp-block-latest-posts__list li {
+    border-bottom: 1px solid #dee5ec;
+    padding-bottom: 12px
+}
+
+figure.wp-block-table {
+    box-shadow: none
+}
+
+.single-post img.attachment-large.size-large.wp-post-image {
+    border-radius: 10px
+}
+
+.sidebar-main .widget_block {
+    border-radius: 4px;
+    padding: 16px !important
+}
+
+.form-submit input,
+.site-main .comments-area {
+    border-radius: 4px !important
+}
+
+.site-main .comments-area {
+    padding-bottom: 0
+}
+
+.sidebar-main .widget_block h2.wp-block-heading,
+.sidebar-main h2.widget-title {
+    font-size: 20px !important;
+    border-bottom: 1px solid #dee5ec;
+    padding-bottom: 14px;
+    position: relative
+}
+
+.sidebar-main .widget_block h2.wp-block-heading::before,
+.sidebar-main h2.widget-title::before {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(135deg, #1f4985 0, #7092c25e 100%);
+    border-radius: 3px
+}
+
+.sidebar-main h2.widget-title span {
+    padding-left: 0 !important;
+    font-size: 20px !important
+}
+
+.sidebar-main h2.widget-title a.ez-toc-widget-sticky-pull-right {
+    background: #fff;
+    border-radius: 40px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-color: #999
+}
+
+@media screen and (max-width:767px) {
+    .navbar-brand img {
+        height: 24px
+    }
+
+    .sidebar-main .ez-toc-widget-sticky-container.mobile-overlay nav {
+        padding: 10px !important
+    }
+
+    .ast-separate-container .site-content .ast-single-post-featured-section+article {
+        margin-top: -4px
+    }
+
+    .ast-primary-header-bar {
+        padding-left: 15px !important;
+        padding-right: 15px !important
+    }
+}
+
+@media screen and (max-width:921px) {
+    .sidebar-main h2.widget-title {
+        padding: 16px !important
+    }
+
+    .sidebar-main .ez-toc-widget-sticky-content {
+        width: 100%
+    }
+
+    .sidebar-main h2.widget-title span.ez-toc-widget-sticky-title {
+        padding: 0 !important;
+        background: 0 0 !important;
+        border: 0 !important
+    }
+
+    .sidebar-main .ez-toc-widget-sticky-content .ez-toc-mobile-close-btn {
+        position: fixed !important;
+        background: red !important;
+        color: #fff !important
+    }
+}
+
+@media screen and (min-width:922px) {
+    .sidebar-main aside#ez_toc_widget_sticky-2 {
+        padding: 0 !important;
+        border-radius: 4px
+    }
+
+    .sidebar-main div.ez-toc-widget-sticky-container {
+        top: 0 !important
+    }
+
+    .sidebar-main div.ez-toc-widget-sticky-container.is_stuck {
+        top: 72px !important
+    }
+
+    .sidebar-main .ez-toc-widget-sticky-container ul li a {
+        font-size: 14px !important;
+        line-height: 22px
+    }
+
+    .sidebar-main h2.widget-title {
+        padding: 16px;
+        position: sticky;
+        top: 0;
+        background: #fff
+    }
+
+    .ez-toc-mobile-toggle-btn,
+    button.ez-toc-mobile-close-btn {
+        display: none !important
+    }
+}

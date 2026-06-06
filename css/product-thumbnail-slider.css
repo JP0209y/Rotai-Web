@@ -1,0 +1,84 @@
+
+
+
+/*--------Product ecommerce card Slider------------*/
+/* =========================
+   THUMBNAIL SLIDER WRAPPER
+========================= */
+.thumb-wrapper {
+  position: relative;
+  margin-top: 12px;
+}
+
+.product-variant {
+  width: 100%;
+}
+
+
+
+/* =========================
+   THUMBNAILS CONTAINER
+========================= */
+.thumbnails-card {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 8px 36px;
+}
+
+/* hide scrollbar */
+.thumbnails-card::-webkit-scrollbar {
+  display: none;
+}
+
+.thumbnails-card {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+
+
+/* =========================
+   SLIDER ARROWS
+========================= */
+.thumb-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #fff;
+  border: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 5;
+  font-size: 18px;
+  user-select: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  transition: all 0.2s ease;
+}
+
+.thumb-arrow:hover {
+  background: #000;
+  color: #fff;
+}
+
+.thumb-arrow.left {
+  left: 5px;
+}
+
+.thumb-arrow.right {
+  right: 5px;
+}
+
+
+
+
+
+
+
+/*--------end------------*/

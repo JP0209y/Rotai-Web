@@ -1,0 +1,2399 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title></title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+
+  <!-- Favicon CSS -->
+
+  <link href="./images/favicon.ico" rel="shortcut icon">
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap"
+    rel="stylesheet">
+
+
+
+  <!-- Bootstrap & Font Awesome -->
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="css/rotai-style.css">
+  <link rel="stylesheet" href="css/responsive-style.css">
+
+  <!-- product-thumbnail-slider CSS -->
+ <link rel="stylesheet" href="css/product-thumbnail-slider.css">
+
+  <!-- support-widget CSS -->
+  <link rel="stylesheet" href="css/support-widget.css">
+
+
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+  
+   <!-- Meta tag JS -->
+<script src="js/meta.js"></script>
+
+</head>
+
+<body>
+
+
+
+  <!-- Top Bar -->
+ <div class="top-bar">
+    <div class="container">
+      <div class="row align-items-center">
+
+        <div class="col-md-3 text-center text-md-start">
+
+
+          <a href="tel:919799979739"> <i class="fas fa-phone"></i> +91-97999-79739 </a>
+
+
+          <span class="mx-2">|</span>
+          <i class="fas fa-envelope"></i>
+          <a href="mailto:info@rotai.in">info@rotai.in</a>
+        </div>
+
+        <div class="col-md-6 text-center d-none d-md-block">
+          <div> <strong>Relax</strong>. <strong>Feel healthier</strong>. <strong>Live longer</strong>. Just 15
+            minutes a
+            day.</div>
+        </div>
+
+
+
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- Search Bar + Logo + Icons -->
+  <div class="search-bar py-2">
+    <div class="container">
+      <div class="row align-items-center">
+
+        <!-- Search -->
+        <div class="col-md-4 text-center text-md-start">
+          <div class="search-box d-none d-md-block">
+            <input type="text" placeholder="Search...">
+            <i class="fas fa-search"></i>
+          </div>
+        </div>
+
+        <!-- Logo -->
+        <div class="col-6 col-md-4  text-start text-md-center">
+
+
+          <button class="btn btn-outline-primary  d-md-none me-2" id="menuBtn"> <i
+              class="fas fa-bars menu-icon"></i></button>
+
+
+          <a href="index.html" class="navbar-brand">
+            <img src="images/rotai-logo.png" alt="Rotai">
+          </a>
+        </div>
+
+        <!-- Icons -->
+        <div class="col-6 col-md-4 text-end">
+          <div class="d-inline-flex align-items-center gap-3">
+
+            <!-- Cart -->
+            <a href="cart.html" class="icon-link">
+              <i class="fas fa-shopping-cart fa-lg"></i>
+              <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">2</span>
+            </a>
+
+            <!-- Wishlist -->
+            <a href="wishlist.html" class="icon-link">
+              <i class="fas fa-heart fa-lg"></i>
+              <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">3</span>
+            </a>
+
+            <!-- Profile -->
+            <div class="dropdown">
+              <a href="#" class="icon-link dropdown-toggle" id="profileDropdown" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                <i class="fas fa-user-circle fa-lg"></i>
+              </a>
+              <ul class="dropdown-menu custom-dropdown dropdown-menu-end" aria-labelledby="profileDropdown">
+                <li><a class="dropdown-item" href="my-account.html"><i class="fas fa-user me-2"></i> My
+                    Account</a></li>
+                <li><a class="dropdown-item" href="my-account.html"><i class="fas fa-box me-2"></i>
+                    Orders</a></li>
+                <li><a class="dropdown-item" href="wishlist.html"><i class="fas fa-heart me-2"></i>
+                    Wishlist</a></li>
+                <li><a class="dropdown-item" href="cart.html"><i class="fas fa-shopping-cart me-2"></i>
+                    Cart</a></li>
+                <li><a class="dropdown-item" href="checkout.html"><i class="fas fa-credit-card me-2"></i>
+                    Checkout</a></li>
+
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item text-danger" href="login.html"><i class="fas fa-sign-out-alt me-2"></i>
+                    Logout</a>
+                </li>
+              </ul>
+            </div>
+
+
+            <!-- Show Login / Register with redirect back -->
+            <a href="login.html" class="btn btn-outline-primary cta-btn">
+              <i class="fas fa-sign-in-alt fa-lg me-md-2"></i> <span>Login</span>
+            </a>
+            <a href="register.html" class="btn btn-primary  cta-btn">
+              <i class="fas fa-user-plus fa-lg me-md-2"></i> <span>Register</span>
+            </a>
+
+
+
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- Navbar -->
+  <div class="main-header">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-light bg-white w-100">
+        <!-- Brand -->
+
+
+        <!-- Mobile Toggle Button -->
+        <button class="navbar-toggler d-none" type="button" data-bs-toggle="collapse"
+          data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Nav Items -->
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav ">
+            <!-- Left links -->
+
+
+            <!-- Dropdown -->
+
+
+
+            <li class="nav-item dropdown">
+              <a class="nav-link" href="#" id="dropdownRovo" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                R-VELOR
+              </a>
+              <div class="dropdown-menu product-dropdown" aria-labelledby="dropdownRovo">
+
+                <!-- Product Feature Section -->
+                <div class="product-highlight-section">
+                  <div class="container">
+                    <div class="row align-items-center">
+                      <!-- Left: Product Info -->
+                      <div class="col-md-4 p-0">
+                        <div class="p-5">
+
+                          <h2 class="product-name"> R-VELOR </h2>
+                          <h3 class="product-model">Physical activity without efforts</h3>
+                          <!-- Content removed for graphic use -->
+                          <a href="r-velor.html" class="btn btn-learn-more mt-3">Buy Now</a>
+                        </div>
+                      </div>
+
+                      <!-- Right: Product Image -->
+                      <div class="col-md-8 text-center p-0">
+                        <img src="images/navbar-rt8532.webp" class="img-fluid product-image" alt="R-VELOR">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+              </div>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link " href="#" id="dropdownSmall" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                R-AUREX
+              </a>
+              <div class="dropdown-menu product-dropdown" aria-labelledby="dropdownSmall">
+
+                <!-- Product Feature Section -->
+                <div class="product-highlight-section">
+                  <div class="container">
+                    <div class="row align-items-center">
+                      <!-- Left: Product Info -->
+                      <div class="col-md-4 p-0">
+                        <div class="p-5">
+
+                          <h2 class="product-name">R-AUREX </h2>
+                          <h3 class="product-model">Lets cycle on massage chair </h3>
+                          <!-- Content removed for graphic use -->
+                          <a href="r-aurex.html" class="btn btn-learn-more mt-3">Buy Now</a>
+                        </div>
+                      </div>
+
+                      <!-- Right: Product Image -->
+                      <div class="col-md-8 text-center p-0">
+                        <img src="images/navbar-rt8802.webp" class="img-fluid product-image" alt="R-AUREX">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </li>
+
+
+            <li class="nav-item dropdown">
+              <a class="nav-link" href="#" id="dropdownBest" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                R-ZENORA
+              </a>
+              <div class="dropdown-menu product-dropdown" aria-labelledby="dropdownBest">
+
+                <!-- Product Feature Section -->
+                <div class="product-highlight-section">
+                  <div class="container">
+                    <div class="row align-items-center">
+                      <!-- Left: Product Info -->
+                      <div class="col-md-4 p-0">
+                        <div class="p-5">
+
+                          <h2 class="product-name">R-ZENORA</h2>
+                          <h3 class="product-model">Walk without walking</h3>
+                          <!-- Content removed for graphic use -->
+                          <a href="r-zenora.html" class="btn btn-learn-more mt-3">Buy Now</a>
+                        </div>
+                      </div>
+
+                      <!-- Right: Product Image -->
+                      <div class="col-md-8 text-center p-0">
+                        <img src="images/navbar-rt8630.webp" class="img-fluid product-image" alt="R-ZENORA">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+              </div>
+            </li>
+
+
+
+
+            <li class="nav-item dropdown">
+              <a class="nav-link" href="#" id="dropdownAnkle" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                R-RELX
+              </a>
+              <div class="dropdown-menu product-dropdown" aria-labelledby="dropdownAnkle">
+                <!-- Product Feature Section -->
+                <div class="product-highlight-section">
+                  <div class="container">
+                    <div class="row align-items-center">
+                      <!-- Left: Product Info -->
+                      <div class="col-md-4 p-0">
+                        <div class="p-5">
+
+                          <h2 class="product-name">R-RELX</h2>
+                          <h3 class="product-model">Relieves spinal fatigue inch by inch </h3>
+                          <!-- Content removed for graphic use -->
+                          <a href="coming-soon.html" class="btn btn-learn-more mt-3">Buy Now</a>
+                        </div>
+                      </div>
+
+                      <!-- Right: Product Image -->
+                      <div class="col-md-8 text-center p-0">
+                        <img src="images/navbar-a39.webp" class="img-fluid product-image" alt="R-RELX">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </li>
+
+
+
+
+
+
+
+          </ul>
+
+          <ul class="navbar-nav ms-auto"> <!-- Right links -->
+
+            <li class="nav-item">
+              <a class="nav-link" href="shop.html">Shop</a>
+            </li>
+
+
+            <li class="nav-item">
+              <a class="nav-link" href="about-us.html">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="blogs.html">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact-us.html">Contact Us</a>
+            </li>
+
+          </ul>
+
+
+        </div>
+
+
+      </nav>
+    </div>
+  </div>
+
+  <!-- Mobile Menu Slide Panels including Mega Menu -->
+  <div id="carouselContainer" class="d-md-none">
+    <div class="carousel-slide" id="megaMenuSlide">
+      <span class="close-slide"> <i class="fas fa-x close-icon"></i> </span>
+
+      <div class="search-box">
+        <input type="text" placeholder="Search...">
+        <i class="fas fa-search"></i>
+      </div>
+
+    <div class="product-item" data-index="0">R-VELOR</div>
+    <div class="product-item" data-index="1">R-AUREX</div>
+    <div class="product-item" data-index="2">R-ZENORA</div>
+    <div class="product-item" data-index="3">R-RELX</div>
+
+
+      <a href="shop.html" class="product-item simple-item">Shop</a>
+      <a href="about-us.html" class="product-item simple-item">About Us</a>
+      <a href="blogs.html" class="product-item simple-item">Blog</a>
+      <a href="contact-us.html" class="product-item simple-item">Contact Us</a>
+    </div>
+
+
+
+
+
+    <div class="carousel-slide" id="slide1">
+
+      <span class="close-slide"><i class="fas fa-x close-icon"></i></span>
+      <div class="card-body">
+        <h5> R-VELOR </h5>
+        <img src="images/mobilenavbar-rt8532.webp" class="img-fluid" alt="R-VELOR">
+        <p>Physical activity without efforts </p>
+        <a href="r-velor.html" class="btn btn-learn-more w-100">Buy Now</a>
+      </div>
+    </div>
+
+    <div class="carousel-slide" id="slide2">
+
+      <span class="close-slide"><i class="fas fa-x close-icon"></i></span>
+      <div class="card-body">
+        <h5> R-AUREX </h5>
+        <img src="images/mobilenavbar-rt8802.webp" class="img-fluid" alt="R-AUREX">
+        <p>Lets cycle on massage chair </p>
+        <a href="r-aurex.html" class="btn btn-learn-more w-100">Buy Now</a>
+      </div>
+    </div>
+
+    <div class="carousel-slide" id="slide3">
+
+      <span class="close-slide"><i class="fas fa-x close-icon"></i></span>
+      <div class="card-body">
+        <h5> R-ZENORA </h5>
+        <img src="images/mobilenavbar-rt8630.webp" class="img-fluid" alt="R-ZENORA">
+        <p>Walk without walking </p>
+        <a href="r-zenora.html" class="btn btn-learn-more w-100">Buy Now</a>
+      </div>
+    </div>
+
+    <div class="carousel-slide" id="slide4">
+
+      <span class="close-slide"><i class="fas fa-x close-icon"></i></span>
+      <div class="card-body">
+        <h5> R-RELX </h5>
+        <img src="images/mobilenavbar-a39.webp" class="img-fluid" alt="R-RELX">
+        <p>Relieves spinal fatigue inch by inch </p>
+        <a href="coming-soon.html" class="btn btn-learn-more w-100">Buy Now</a>
+      </div>
+    </div>
+
+
+
+
+
+  </div>
+
+
+  <!-- Product Detail Section -->
+  <section class="section-container pt-md-5">
+
+    <div class="container">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb bg-transparent px-0">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item"><a href="shop.html">Shop</a></li>
+          <li class="breadcrumb-item active" aria-current="page">R-AUREX</li>
+        </ol>
+      </nav>
+    </div>
+
+
+
+    <div class="container">
+      <div class="white-card">
+        <div class="row">
+
+          <!-- Left Column - Images -->
+          <div class="col-lg-5 zoom-in">
+
+            <div class="d-flex flex-column align-items-center">
+
+              <!-- Main Image -->
+              <div class="zoom-container">
+                <img id="mainImage" src="images/R-AUREX/col-1/rt-8802-whitegray-10.webp" alt="Product">
+              </div>
+
+              <!-- Thumbnails -->
+
+              <div class="product-variant">
+
+                <div class="thumb-wrapper">
+                  <button class="thumb-arrow left">&#10094;</button>
+
+                  <div id="thumbnails" class="thumbnails-card">
+
+                  </div>
+
+                  <button class="thumb-arrow right">&#10095;</button>
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+          <!-- Right Column - Product Info -->
+          <div class="col-lg-7 mt-4 mt-lg-0   ps-lg-4">
+            <h6 class="text-muted text-uppercase">First Cycling Massage Chair in the Industry</h6>
+            <h2 class="fw-bold">R-AUREX</h2>
+
+            <!-- Ratings -->
+            <div class="mb-3">
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star-half-alt"></i>
+              <span class="text-dark">4.5 Rating</span>
+            </div>
+
+            <!-- Pricing -->
+            <div class="mb-3">
+              <span class="price">₹7,99,999</span>
+              <span class="old-price">₹9,99,999</span>
+              <span class="badge-discount">20% OFF</span>
+            </div>
+
+            <!-- Product Description -->
+            <p>Introducing the industry’s first Cycling Massage Chair with Cycling Mode and 2 Zero Gravity
+              Positions, relaxing knees and hips while stimulating thigh muscles for enhanced comfort, recovery, and
+              full-body relaxation.
+            </p>
+
+
+            <!-- Color Options -->
+            <div class="color-options">
+              <div class="color-circle active" style="background:#E5E5E5" onclick="loadSet('col-1', this)"
+                title="Silver"></div>
+
+
+              <div class="color-circle" style="background:#E6CBA8" onclick="loadSet('col-2', this)" title="Champagne">
+              </div>
+            </div>
+
+
+
+
+            <!-- Product Actions -->
+            <div class="product-actions">
+              <!-- Quantity Selector -->
+              <div class="quantity-selector ">
+                <button class="btn-decrement" type="button">−</button>
+                <input type="text" value="1" min="1">
+                <button class="btn-increment" type="button">+</button>
+              </div>
+
+              <!-- Add to Cart -->
+              <a href="javascript:void(0)" class="btn btn-primary">
+                <span>Add to Cart</span>
+              </a>
+              <!-- Buy Now -->
+              <a href="checkout.html" class="btn btn-buy-now">Buy Now</a>
+
+              <!-- Wishlist -->
+              <a href="wishlist.html" class="btn-wishlist"><i class="fa fa-heart"></i></a>
+
+
+              <!-- Share Button -->
+              <div class="dropdown d-inline-block">
+                <button class="btn btn-share dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                  <i class="fa-solid fa-share-nodes me-2"></i> Share
+                </button>
+
+                <ul class="dropdown-menu">
+                  <li class="whatsapp-lk">
+                    <a class="dropdown-item" href="#" onclick="shareWhatsApp()">
+                      <i class="fab fa-whatsapp "></i> WhatsApp
+                    </a>
+                  </li>
+                  <li class="facebook-lk">
+                    <a class="dropdown-item" href="#" onclick="shareFacebook()">
+                      <i class="fab fa-facebook-f"></i> Facebook
+                    </a>
+                  </li>
+                  <li class="link-lk">
+                    <a class="dropdown-item" href="#" onclick="copyLink()">
+                      <i class="fa-solid fa-link "></i> Copy Link
+                    </a>
+                  </li>
+                </ul>
+              </div>
+
+
+            </div>
+
+            <!-- Features -->
+            <div class="row text-center mt-4 border-top py-2 g-3">
+              <div class="col-6 col-md-3">
+                <div class="product-feature-icon">
+                  <i class="fa fa-cogs"></i>
+                  <p class="mb-0">4D Dual Mechanism</p>
+                </div>
+              </div>
+
+              <div class="col-6 col-md-3">
+                <div class="product-feature-icon">
+                  <i class="fa fa-compress"></i>
+                  <p class="mb-0">Full Airbag Coverage</p>
+                </div>
+              </div>
+
+              <div class="col-6 col-md-3">
+                <div class="product-feature-icon">
+                  <i class="fa fa-fire"></i>
+                  <p class="mb-0">Infrared Heating</p>
+                </div>
+              </div>
+
+              <div class="col-6 col-md-3">
+                <div class="product-feature-icon">
+                  <i class="fa fa-microphone"></i>
+                  <p class="mb-0">Voice + Smart Control</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-2 border-top py-3 flex-button">
+
+
+              <!-- Download Brochure Button -->
+
+              <a class="btn btn-secondary" href="javascript:void(0)"
+                onclick="downloadBrochure('rotai-r-velor-premium-japanese-massage-chair')">
+                <i class="fa-solid fa-file-arrow-down me-2"></i>
+                Download Brochure
+              </a>
+
+
+              <!-- Product Specifications Button -->
+              <a class="btn btn-primary" href="#productspecifications">
+                <i class="fa-solid fa-list-check me-2"></i>
+                Product Specifications
+              </a>
+
+
+            </div>
+
+
+            <!-- Product Detail -->
+            <div class="mt-4">
+
+              <!-- Modern Tabs -->
+              <ul class="nav nav-tabs  detail-tab" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link active" id="returns-tab" data-bs-toggle="tab" data-bs-target="#returns"
+                    type="button" role="tab">Returns & Exchange</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="warranty-tab" data-bs-toggle="tab" data-bs-target="#warranty"
+                    type="button" role="tab">Warranty</button>
+                </li>
+              </ul>
+
+              <!-- Tab Content -->
+              <div class="tab-content tab-content-detail" id="myTabContent">
+                <!-- Returns & Exchange -->
+                <div class="tab-pane fade show active" id="returns" role="tabpanel" aria-labelledby="returns-tab">
+                  <h5> <a href="return-policy.html" target="_blank">Learn more about our returns process here</a>. </h5>
+
+                </div>
+                <!-- Warranty -->
+                <div class="tab-pane fade" id="warranty" role="tabpanel" aria-labelledby="warranty-tab">
+                  <h5><a href="warranty.html" target="_blank">Read full policy</a>.</h5>
+
+                </div>
+              </div>
+
+
+            </div>
+
+
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+
+
+  <!-- Video Section -->
+  <section class="section-container pt-0 ">
+    <div class="container fade-up ">
+      <div class="row">
+        <div class="col-lg-12">
+          <video controls width="100%" poster="images/R-AUREX/video/rt8802-thumbnail-vid.png">
+            <source src="images/R-AUREX/video/RT8802.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <!-- Mechanism -->
+  <section class="section-container pt-0">
+    <div class="container">
+
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="product-section-accordion ">
+            <div class="product-accordion" id="productAccordion">
+
+
+              <!-- 1: Accordion -->
+              <div class="product-item-accordion fade-down">
+                <h2 class="product-header-accordion" id="heading1">
+                  <button class="product-btn" type="button" data-bs-toggle="collapse" data-bs-target="#accordion1"
+                    aria-expanded="false" aria-controls="accordion1">
+                    Leg & Foot Care
+                  </button>
+                </h2>
+                <div id="accordion1" class="product-collapse collapse" data-bs-parent="#productAccordion">
+                  <div class="product-body">
+                    <div class="row">
+                      <div class="col-md-12 mb-4">
+                        <img src="images/R-AUREX/detail/rt8802-graphic-01.webp" alt="Leg & Foot Care"
+                          class="img-fluid tab-img">
+                      </div>
+                      <div class="col-md-12">
+                        <h2 class="mb-3">Leg & Foot Care</h2>
+                        <p>Dedicated rollers and airbags provide deep leg and foot rejuvenation, enhancing circulation
+                          and reducing soreness. This <strong> full body massage chair </strong> delivers targeted
+                          acupressure, making it
+                          ideal for users searching for the best massage chair (R-AUREX) in India with superior leg
+                          therapy and long-term muscle relief.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+              <!-- 2: Accordion -->
+              <div class="product-item-accordion fade-down">
+                <h2 class="product-header-accordion" id="heading2">
+                  <button class="product-btn " type="button" data-bs-toggle="collapse" data-bs-target="#accordion2"
+                    aria-expanded="false" aria-controls="accordion2">
+                    Hands-Free Operation
+                  </button>
+                </h2>
+                <div id="accordion2" class="product-collapse collapse" data-bs-parent="#productAccordion">
+                  <div class="product-body">
+                    <div class="row">
+                      <div class="col-md-12 mb-4">
+                        <img src="images/R-AUREX/detail/rt8802-graphic-02.webp" alt="Hands-Free Operation"
+                          class="img-fluid tab-img">
+                      </div>
+                      <div class="col-md-12">
+                        <h2 class="mb-3">Hands-Free Operation</h2>
+                        <p>Hands-free voice commands allow effortless control of your massage sessions. Whether you
+                          choose relaxation, recovery, or wellness programs, the chair responds instantly. This advanced
+                          system positions the model among India’s leading massage chairs, blending luxury, convenience,
+                          and modern <strong> Japanese massage chair </strong> innovation.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+              <!-- 3: Accordion -->
+              <div class="product-item-accordion fade-down">
+                <h2 class="product-header-accordion" id="heading3">
+                  <button class="product-btn " type="button" data-bs-toggle="collapse" data-bs-target="#accordion3"
+                    aria-expanded="false" aria-controls="accordion3">
+                    4D Dual Mech
+                  </button>
+                </h2>
+                <div id="accordion3" class="product-collapse collapse" data-bs-parent="#productAccordion">
+                  <div class="product-body">
+                    <div class="row">
+                      <div class="col-md-12 mb-4">
+                        <img src="images/R-AUREX/detail/rt8802-graphic-03.webp" alt="4D Dual Mech"
+                          class="img-fluid tab-img">
+                      </div>
+                      <div class="col-md-12">
+                        <h2 class="mb-3">4D Dual Mech</h2>
+                        <p>The millimeter-precise 4D dual mech uses synchronized 4-hand movements to mimic an expert
+                          therapist. Its deep fascia massage penetrates tight muscles, offering unmatched relief. This
+                          premium mechanism upgrades it from regular massage chairs to a world-class Japanese massage
+                          chair alternative in India.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+              <!-- 4: Accordion -->
+              <div class="product-item-accordion fade-down">
+                <h2 class="product-header-accordion" id="heading4">
+                  <button class="product-btn " type="button" data-bs-toggle="collapse" data-bs-target="#accordion4"
+                    aria-expanded="false" aria-controls="accordion4">
+                    8 Leg Focused Programs
+                  </button>
+                </h2>
+                <div id="accordion4" class="product-collapse collapse" data-bs-parent="#productAccordion">
+                  <div class="product-body">
+                    <div class="row">
+                      <div class="col-md-12 mb-4">
+                        <img src="images/R-AUREX/detail/rt8802-graphic-04.webp" alt="8 Leg Focused Programs"
+                          class="img-fluid tab-img">
+                      </div>
+                      <div class="col-md-12">
+                        <h2 class="mb-3">8 Leg Focused Programs</h2>
+                        <p>Eight specialized leg programs target fatigue, swelling, and stiffness, helping strengthen
+                          lower-body muscles. Perfect for athletes and daily workers, this feature enhances mobility and
+                          endurance. These targeted routines are why this <strong> full body massage chair </strong>
+                          stands out as one of
+                          the best massage chairs in India.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+              <!-- 5: Accordion -->
+              <div class="product-item-accordion fade-down">
+                <h2 class="product-header-accordion" id="heading5">
+                  <button class="product-btn " type="button" data-bs-toggle="collapse" data-bs-target="#accordion5"
+                    aria-expanded="false" aria-controls="accordion5">
+                    Airbags & Safety
+                  </button>
+                </h2>
+                <div id="accordion5" class="product-collapse collapse" data-bs-parent="#productAccordion">
+                  <div class="product-body">
+                    <div class="row">
+                      <div class="col-md-12 mb-4">
+                        <img src="images/R-AUREX/detail/rt8802-graphic-05.webp" alt="Airbags & Safety"
+                          class="img-fluid tab-img">
+                      </div>
+                      <div class="col-md-12">
+                        <h2 class="mb-3">Airbags & Safety</h2>
+                        <p>Multi-zone airbags with adjustable intensity deliver safe, controlled compression. Integrated
+                          anti-pinch sensors and precision motors ensure secure positioning during movement. This
+                          safety-first engineering makes it suitable for all age groups seeking a reliable <strong> zero
+                            gravity
+                            massage chair </strong> with premium protection systems.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+              <!-- 6: Accordion -->
+              <div class="product-item-accordion fade-down">
+                <h2 class="product-header-accordion" id="heading6">
+                  <button class="product-btn " type="button" data-bs-toggle="collapse" data-bs-target="#accordion6"
+                    aria-expanded="false" aria-controls="accordion6">
+                    Heating & Controls
+                  </button>
+                </h2>
+                <div id="accordion6" class="product-collapse collapse" data-bs-parent="#productAccordion">
+                  <div class="product-body">
+                    <div class="row">
+                      <div class="col-md-12 mb-4">
+                        <img src="images/R-AUREX/detail/rt8802-graphic-06.webp" alt="Heating & Controls"
+                          class="img-fluid tab-img">
+                      </div>
+                      <div class="col-md-12">
+                        <h2 class="mb-3">Heating & Controls</h2>
+                        <p>Carbon fiber and graphene heating zones melt away deep tension while intelligent
+                          controls—touchscreen, armrest buttons, voice interaction, and app connectivity—offer total
+                          ease. These innovations position it as a luxury full body massage chair designed for modern
+                          Indian homes demanding comfort and technology.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+
+
+  <!-- Features -->
+
+  <section class="section-container pt-0 pb-0 features-sec">
+    <div class="container">
+
+
+      <div class="scroll-section">
+        <div class="row align-items-center">
+          <div class="col-md-4   order-2 order-md-1 slide-right">
+            <h2 class="mb-4 product-d-heading">Cycling Mode</h2>
+            <p> The cycling mode simulates smooth knee and hip rotations, enhancing joint flexibility
+              and reducing stiffness. This rare feature in <strong> massage chairs </strong> improves circulation and
+              mobility, making it ideal for users seeking the best massage chair in India for joint rehabilitation and
+              daily muscle recovery.
+
+            </p>
+          </div>
+
+          <div class="col-md-8 order-1 order-md-2 mb-3 mb-md-0 slide-left">
+            <img src="images/R-AUREX/detail/rt8802-graphic-07.webp" alt="Cycling Mode" class="img-fluid product-d-img">
+          </div>
+        </div>
+
+      </div>
+
+      <div class="scroll-section">
+        <div class="row align-items-center">
+          <div class="col-md-8 mb-3 mb-md-0 slide-right">
+            <img src="images/R-AUREX/detail/rt8802-graphic-08.webp" alt="Massage Programs"
+              class="img-fluid product-d-img">
+          </div>
+          <div class="col-md-4  slide-left">
+            <h2 class="mb-4 product-d-heading"> Massage Programs </h2>
+            <p> With 12 auto programs and 6 manual techniques, this full body massage chair covers deep tissue,
+              stretching, relaxation, and
+              cool-down routines. These comprehensive massage styles deliver Japanese massage chair–like precision,
+              meeting every
+              wellness need from stress relief to long-term muscle care.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="scroll-section">
+        <div class="row align-items-center">
+          <div class="col-md-4   order-2 order-md-1 slide-right">
+            <h2 class="mb-4 product-d-heading"> Airbag Coverage
+            </h2>
+            <p> Airbags from shoulders to feet create dynamic compression that boosts blood flow and reduces fatigue.
+              This ensures a holistic <strong> full body massage chair </strong> experience.
+              Such extensive coverage is typically found only in top Japanese massage chairs, making it a standout in
+              the Indian market.
+            </p>
+          </div>
+          <div class="col-md-8 order-1 order-md-2 mb-3 mb-md-0 slide-left">
+            <img src="images/R-AUREX/detail/rt8802-graphic-09.webp" alt="Airbag Coverage"
+              class="img-fluid product-d-img">
+          </div>
+        </div>
+
+      </div>
+
+      <div class="scroll-section">
+        <div class="row align-items-center">
+          <div class="col-md-8 mb-3 mb-md-0 slide-right">
+            <img src="images/R-AUREX/detail/rt8802-graphic-10.webp" alt="Entertainment & Charging"
+              class="img-fluid product-d-img ">
+          </div>
+          <div class="col-md-4  slide-left">
+            <h2 class="mb-4 product-d-heading">Entertainment & Charging</h2>
+            <p> Enjoy Bluetooth speakers, wireless charging, phone placement, and USB ports during your massage
+              sessions. This combination transforms wellness time into a luxurious retreat.
+              These features make it not just a massage chair—but one of the best lifestyle-focused massage chairs in
+              India (R-AUREX).
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+      <div class="scroll-section">
+        <div class="row align-items-center">
+          <div class="col-md-4  order-2 order-md-1 slide-right">
+            <h2 class="mb-4 product-d-heading">Heating & Stretching</h2>
+            <p> Full-body heating zones combined with advanced yoga stretch functionality help decompress the spine,
+              improve posture, and relax tight muscles. This yoga feature massage chair
+              replicates therapeutic stretching found in wellness studios, making it ideal for people with desk jobs or
+              long standing hours.
+            </p>
+          </div>
+
+          <div class="col-md-8 order-1 order-md-2 mb-3 mb-md-0 slide-left">
+            <img src="images/R-AUREX/detail/rt8802-graphic-11.webp" alt="Heating & Stretching"
+              class="img-fluid product-d-img">
+          </div>
+        </div>
+
+      </div>
+
+      <div class="scroll-section">
+        <div class="row align-items-center">
+          <div class="col-md-8 mb-3 mb-md-0 slide-right">
+            <img src="images/R-AUREX/detail/rt8802-graphic-12.webp" alt="Quick Control" class="img-fluid product-d-img">
+          </div>
+          <div class="col-md-4  slide-left">
+            <h2 class="mb-4 product-d-heading"> Quick Control </h2>
+            <p> Elder-friendly quick buttons, voice assistance, and built-in overheat and anti-pinch protection ensure
+              safe operation for all users. These thoughtful additions create a seamless <strong> zero
+                gravity massage chair </strong> experience, suited for families wanting comfort, wellness, and complete
+              safety at
+              home.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+    </div>
+
+
+  </section>
+
+
+  <!-- Function -->
+  <section class="section-container bg-light-primary py-5">
+    <div class="container zoom-in">
+
+      <!-- Swiper Slider -->
+      <div class="swiper bannerSwiper">
+        <div class="swiper-wrapper">
+
+          <!-- Slide 1 -->
+          <div class="swiper-slide">
+            <img src="images/R-AUREX/detail/rt8802-graphic-13.webp" alt="Joint & Muscle Relief">
+            <div class="slide-content">
+              <h3>Joint & Muscle Relief</h3>
+              <p> The chair’s cycling mechanism reduces stiffness in the thighs, hips, and lower back. Deep-pressure
+                massage improves mobility and comfort.
+                This makes it one of the best massage chairs in India for people experiencing daily joint tension or
+                recovering from long working hours. </p>
+            </div>
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="swiper-slide">
+            <img src="images/R-AUREX/detail/rt8802-graphic-14.webp" alt="Helps Relax the Iliopsoas Muscle">
+            <div class="slide-content">
+              <h3>Helps Relax the Iliopsoas Muscle</h3>
+              <p> Smooth cycling motions and deep kneading techniques target the iliopsoas muscle, easing discomfort
+                caused by long sitting. This function enhances core flexibility, making this full body massage
+                chair perfect for office workers needing consistent, therapeutic relaxation comparable to Japanese
+                massage chair quality. </p>
+            </div>
+          </div>
+
+          <!-- Slide 3 -->
+          <div class="swiper-slide">
+            <img src="images/R-AUREX/detail/rt8802-graphic-15.webp" alt="Yoga Poses Through Chair">
+            <div class="slide-content">
+              <h3>Yoga Poses Through Chair</h3>
+              <p> The yoga feature massage chair gently guides your body through stretches like twists, bends, and
+                spinal elongation. These therapeutic movements reduce fatigue and improve posture. It’s ideal
+                for users seeking a zero gravity massage chair that supports flexibility and stress relief. </p>
+            </div>
+          </div>
+
+          <!-- Slide 4 -->
+          <div class="swiper-slide">
+            <img src="images/R-AUREX/detail/rt8802-graphic-16.webp" alt="Circulation Boost">
+            <div class="slide-content">
+              <h3>Circulation Boost</h3>
+              <p> Rhythmic compression, heat therapy, and lower-body acupressure enhance blood circulation throughout
+                the body.
+                This function helps reduce swelling and fatigue, making the model one of India’s most effective massage
+                chairs for whole-body health, wellness, and energy restoration.
+              </p>
+            </div>
+          </div>
+
+
+          <!-- Slide 5 -->
+          <div class="swiper-slide">
+            <img src="images/R-AUREX/detail/rt8802-graphic-17.webp" alt="Leg & Foot Care">
+            <div class="slide-content">
+              <h3>Leg & Foot Care</h3>
+              <p> Advanced rollers and airbags revive tired feet, improve lower-limb blood flow, and reduce pain from
+                standing or
+                walking. This full body massage chair provides
+                spa-level foot therapy at home, making it a top contender for the best massage chair in India.
+              </p>
+            </div>
+          </div>
+
+
+
+
+          <!-- Slide 7 -->
+          <div class="swiper-slide">
+            <img src="images/R-AUREX/detail/rt8802-graphic-18.webp" alt="Helps Relax the Hamstrings">
+            <div class="slide-content">
+              <h3>Helps Relax the Hamstrings</h3>
+              <p> Targeted stretching combined with deep-tissue kneading loosens tight hamstrings
+                over time. This function reduces stiffness and enhances leg mobility, making it an
+                essential feature for athletes, gym-goers, and anyone searching for a <strong> premium full body massage
+                  chair </strong>
+                for daily recovery.
+
+              </p>
+            </div>
+          </div>
+
+          <!-- Slide 8 -->
+          <div class="swiper-slide">
+            <img src="images/R-AUREX/detail/rt8802-graphic-19.webp" alt="Helps Relax the Piriformis">
+            <div class="slide-content">
+              <h3>Helps Relax the Piriformis</h3>
+              <p> By applying firm yet gentle pressure, the <strong> R-AUREX massage chair </strong> relaxes the
+                piriformis muscle,
+                stabilizes
+                the hips, and reduces sciatic discomfort. This enhances posture and mobility. Such specialized
+                functions are usually found in high-end Japanese massage chairs, making this one exceptionally powerful
+                for home wellness.
+
+
+              </p>
+            </div>
+          </div>
+
+
+        </div>
+
+        <!-- Swiper Controls -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+
+      </div>
+
+
+    </div>
+  </section>
+
+
+  <!-- Specifications -->
+  <section class="section-container">
+    <div class="container">
+
+      <div class="fade-down">
+
+        <div class="card card-specs">
+
+          <div class="card-header-specs">
+            <h2>Product Specifications </h2>
+
+          </div>
+
+
+          <div class="specs-grid">
+            <!-- LEFT: Specs Table -->
+
+
+            <div class="specs-left">
+              <table class="product-specs-modern">
+                <thead>
+                  <tr>
+                    <th colspan="2">Specifications</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">Product Name</th>
+                    <td> R-AUREX </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Model</th>
+                    <td>RT8802</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Color</th>
+                    <td>Silver / Champagne</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Rated Voltage</th>
+                    <td>220-240V</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Gross Weight / Net Weight</th>
+                    <td> 206 kgs / 174 kgs </td>
+                  </tr>
+
+                  <tr>
+                    <th scope="row">Power Consumption</th>
+                    <td> 270W</td>
+                  </tr>
+
+
+
+                  <tr>
+                    <th scope="row">Product Size（mm）</th>
+                    <td>Upright size: 1725*860*1250mm <br> Reclined size: 2000*860*925mm</td>
+                  </tr>
+
+
+
+                  <tr>
+                    <th scope="row">Features</th>
+                    <td>
+                      <ul class="mb-0">
+                        <li>Cycling Mode</li>
+                        <li>Massage Programs</li>
+                        <li>Airbag Coverage</li>
+                        <li>Entertainment & Charging</li>
+                        <li>Heating & Stretching</li>
+                        <li>Quick Control</li>
+
+                      </ul>
+                    </td>
+                  </tr>
+
+
+                  <tr>
+                    <th scope="row">Warranty</th>
+                    <td>3 Years</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Price</th>
+                    <td><strong class="price">₹7,99,999</strong></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+
+
+            <!-- RIGHT: Image + Price + CTA -->
+            <div class="specs-right">
+              <img class="table-product-image" src="images/R-AUREX/col-1/rt-8802-whitegray-3.webp" alt="R-AUREX">
+
+              <div class="price-card">
+                <div>
+                  <div>Best Price</div>
+                  <div class="price">₹7,99,999</div>
+                </div>
+                <div style="min-width:110px">
+                  <button class="btn btn-primary buy-btn">Buy Now</button>
+                </div>
+              </div>
+
+              <div class="d-grid gap-2">
+                <button class="btn btn-outline-primary"><span>Add to Cart</span></button>
+                <button class="btn btn-outline-primary"><span>Add to Wishlist</span></button>
+              </div>
+
+              <div class="spec-note">
+                <strong>Note:</strong> Immediate delivery is applicable with the addition of transit time.
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+
+
+      </div>
+
+
+    </div>
+  </section>
+
+ <!-- R-Aurex Faqs  -->
+<section class="section-container bg-light-primary">
+<div class="container">
+
+<h2 class="mb-4 mb-md-5 text-center fade-up"> Frequently Asked Questions </h2>
+
+
+
+  <div class="faq-box fade-down">
+
+
+<div class="accordion" id="faqAccordion">
+
+  <!-- 1 -->
+  <div class="accordion-item">
+    <h3 class="accordion-header" id="heading1">
+      <button class="accordion-button rounded-pill collapsed" type="button"
+        data-bs-toggle="collapse" data-bs-target="#collapse1">
+        What makes the Rotai R-AUREX massage chair unique?
+      </button>
+    </h3>
+    <div id="collapse1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+      <div class="accordion-body">
+        The Rotai R-AUREX features an advanced 4D dual mechanism system, intelligent cycling mode, dedicated leg and foot therapy, yoga stretching programs, and voice-enabled smart controls for a premium full body massage experience.
+      </div>
+    </div>
+  </div>
+
+  <!-- 2 -->
+  <div class="accordion-item">
+    <h3 class="accordion-header" id="heading2">
+      <button class="accordion-button rounded-pill collapsed" type="button"
+        data-bs-toggle="collapse" data-bs-target="#collapse2">
+        Does the Rotai R-AUREX support Zero Gravity recline?
+      </button>
+    </h3>
+    <div id="collapse2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+      <div class="accordion-body">
+       Yes, the Rotai R-AUREX includes dual Zero Gravity positions that help reduce spinal pressure, improve circulation, and enhance overall massage comfort and relaxation
+      </div>
+    </div>
+  </div>
+
+  <!-- 3 -->
+  <div class="accordion-item">
+    <h3 class="accordion-header" id="heading3">
+      <button class="accordion-button rounded-pill collapsed" type="button"
+        data-bs-toggle="collapse" data-bs-target="#collapse3">
+        What is Cycling Mode in the R-AUREX massage chair?
+      </button>
+    </h3>
+    <div id="collapse3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+      <div class="accordion-body">
+        Cycling Mode simulates smooth knee and hip rotation movements to help improve flexibility, support joint mobility, reduce stiffness, and enhance lower body recovery.
+      </div>
+    </div>
+  </div>
+
+  <!-- 4 -->
+  <div class="accordion-item">
+    <h3 class="accordion-header" id="heading4">
+      <button class="accordion-button rounded-pill collapsed" type="button"
+        data-bs-toggle="collapse" data-bs-target="#collapse4">
+        Does the Rotai R-AUREX provide full body massage coverage?
+      </button>
+    </h3>
+    <div id="collapse4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+      <div class="accordion-body">
+        Yes, the R-AUREX is designed for full body massage including the neck, shoulders, back, waist, hips, legs, calves, and feet using intelligent airbags, rollers, and stretching functions.
+      </div>
+    </div>
+  </div>
+
+  <!-- 5 -->
+  <div class="accordion-item">
+    <h3 class="accordion-header" id="heading5">
+      <button class="accordion-button rounded-pill collapsed" type="button"
+        data-bs-toggle="collapse" data-bs-target="#collapse5">
+        Is the Rotai R-AUREX good for muscle recovery and daily relaxation?
+      </button>
+    </h3>
+    <div id="collapse5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+      <div class="accordion-body">
+       The Rotai R-AUREX is designed to help reduce muscle tension, body fatigue, stiffness, and stress through deep tissue massage, air compression therapy, stretching programs, and heating functions.
+      </div>
+    </div>
+  </div>
+
+  <!-- 6 -->
+  <div class="accordion-item">
+    <h3 class="accordion-header" id="heading6">
+      <button class="accordion-button rounded-pill collapsed" type="button"
+        data-bs-toggle="collapse" data-bs-target="#collapse6">
+        Does the R-AUREX massage chair include heating therapy?
+      </button>
+    </h3>
+    <div id="collapse6" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+      <div class="accordion-body">
+        Yes, the chair includes full body heating zones designed to relax muscles, improve circulation, reduce stiffness, and enhance massage comfort during sessions.
+      </div>
+    </div>
+  </div>
+
+  <!-- 7 -->
+  <div class="accordion-item">
+    <h3 class="accordion-header" id="heading7">
+      <button class="accordion-button rounded-pill collapsed" type="button"
+        data-bs-toggle="collapse" data-bs-target="#collapse7">
+        How many massage programs are available in the Rotai R-AUREX?
+      </button>
+    </h3>
+    <div id="collapse7" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+      <div class="accordion-body">
+        The Rotai R-AUREX includes multiple automatic massage programs and manual massage techniques designed for stretching, relaxation, recovery, muscle relief, and daily wellness support.
+      </div>
+    </div>
+  </div>
+
+  <!-- 8 -->
+  <div class="accordion-item">
+    <h3 class="accordion-header" id="heading8">
+      <button class="accordion-button rounded-pill collapsed" type="button"
+        data-bs-toggle="collapse" data-bs-target="#collapse8">
+        Does the Rotai R-AUREX support voice control and smart features?
+      </button>
+    </h3>
+    <div id="collapse8" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+      <div class="accordion-body">
+       Yes, the Rotai R-AUREX includes hands-free voice control, Bluetooth audio support, wireless charging, quick-access controls, and intelligent smart operation for a modern wellness experience.
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+</div>
+
+
+</div>
+</section>
+
+ <!-- R-Relx Faqs  -->
+<section class="section-container bg-light-primary">
+<div class="container">
+
+<h2 class="mb-4 mb-md-5 text-center fade-up"> Frequently Asked Questions </h2>
+
+
+
+  <div class="faq-box fade-down">
+
+   <div class="accordion" id="faqAccordion">
+
+  <!-- 1 -->
+  <div class="accordion-item">
+    <h3 class="accordion-header" id="heading1">
+      <button class="accordion-button rounded-pill collapsed" type="button"
+        data-bs-toggle="collapse" data-bs-target="#collapse1">
+        What makes the Rotai R-RELX massage chair ideal for home wellness?
+      </button>
+    </h3>
+    <div id="collapse1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+      <div class="accordion-body">
+        The Rotai R-RELX combines 3D massage technology, Zero Gravity recline, intelligent body scanning, heating therapy, and full body air compression to deliver a premium relaxation experience for daily home wellness.
+      </div>
+    </div>
+  </div>
+
+  <!-- 2 -->
+  <div class="accordion-item">
+    <h3 class="accordion-header" id="heading2">
+      <button class="accordion-button rounded-pill collapsed" type="button"
+        data-bs-toggle="collapse" data-bs-target="#collapse2">
+        Does the Rotai R-RELX support intelligent voice control?
+      </button>
+    </h3>
+    <div id="collapse2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+      <div class="accordion-body">
+        Yes, the R-RELX includes offline intelligent voice control that allows users to operate massage functions and adjust settings conveniently through voice commands.
+      </div>
+    </div>
+  </div>
+
+  <!-- 3 -->
+  <div class="accordion-item">
+    <h3 class="accordion-header" id="heading3">
+      <button class="accordion-button rounded-pill collapsed" type="button"
+        data-bs-toggle="collapse" data-bs-target="#collapse3">
+        How does the 7-section SL Track system improve massage performance?
+      </button>
+    </h3>
+    <div id="collapse3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+      <div class="accordion-body">
+        The 7-section SL Track follows the natural curve of the spine from the neck to the thighs, providing smoother roller movement, improved spinal support, and enhanced full body massage coverage.
+      </div>
+    </div>
+  </div>
+
+  <!-- 4 -->
+  <div class="accordion-item">
+    <h3 class="accordion-header" id="heading4">
+      <button class="accordion-button rounded-pill collapsed" type="button"
+        data-bs-toggle="collapse" data-bs-target="#collapse4">
+        Can the Rotai R-RELX help reduce stress and body fatigue?
+      </button>
+    </h3>
+    <div id="collapse4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+      <div class="accordion-body">
+       The R-RELX is designed to help reduce daily stress, muscle tension, body fatigue, and stiffness
+        through deep tissue massage, air compression therapy, and relaxation-focused massage programs.
+      </div>
+    </div>
+  </div>
+
+  <!-- 5 -->
+  <div class="accordion-item">
+    <h3 class="accordion-header" id="heading5">
+      <button class="accordion-button rounded-pill collapsed" type="button"
+        data-bs-toggle="collapse" data-bs-target="#collapse5">
+        Does the Rotai R-RELX include foot and calf massage functions?
+      </button>
+    </h3>
+    <div id="collapse5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+      <div class="accordion-body">
+        Yes, the chair includes Guasha-style foot rollers and calf airbag massage designed to improve circulation, stimulate pressure points, and relax tired legs and feet.
+      </div>
+    </div>
+  </div>
+
+  <!-- 6 -->
+  <div class="accordion-item">
+    <h3 class="accordion-header" id="heading6">
+      <button class="accordion-button rounded-pill collapsed" type="button"
+        data-bs-toggle="collapse" data-bs-target="#collapse6">
+        What massage techniques are available in the Rotai R-RELX?
+      </button>
+    </h3>
+    <div id="collapse6" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+      <div class="accordion-body">
+      The Rotai R-RELX offers multiple massage techniques including kneading, shiatsu, tapping, knocking, and combination massage modes for a personalized massage experience.
+      </div>
+    </div>
+  </div>
+
+  <!-- 7 -->
+  <div class="accordion-item">
+    <h3 class="accordion-header" id="heading7">
+      <button class="accordion-button rounded-pill collapsed" type="button"
+        data-bs-toggle="collapse" data-bs-target="#collapse7">
+        Does the Rotai R-RELX include heating therapy for muscle relaxation?
+      </button>
+    </h3>
+    <div id="collapse7" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+      <div class="accordion-body">
+        Yes, the chair includes waist heating therapy with advanced silicone alloy heating pads designed to relax muscles, improve flexibility, and enhance massage comfort.
+      </div>
+    </div>
+  </div>
+
+  <!-- 8 -->
+  <div class="accordion-item">
+    <h3 class="accordion-header" id="heading8">
+      <button class="accordion-button rounded-pill collapsed" type="button"
+        data-bs-toggle="collapse" data-bs-target="#collapse8">
+        Is the Rotai R-RELX suitable for office workers and long sitting hours?
+      </button>
+    </h3>
+    <div id="collapse8" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+      <div class="accordion-body">
+       Yes, the R-RELX is designed for people with long sitting hours and work-related stress by helping reduce neck stiffness, lower back tension, and muscle fatigue through targeted massage programs.
+      </div>
+    </div>
+  </div>
+
+</div> 
+
+</div>
+
+
+</div>
+</section>
+
+<!-- R-Nexa Faqs  -->
+<section class="section-container bg-light-primary">
+<div class="container">
+
+<h2 class="mb-4 mb-md-5 text-center fade-up"> Frequently Asked Questions </h2>
+
+
+
+  <div class="faq-box fade-down">
+
+  <div class="accordion" id="faqAccordion">
+
+  <!-- 1 -->
+  <div class="accordion-item">
+    <h3 class="accordion-header" id="heading1">
+      <button class="accordion-button rounded-pill collapsed" type="button"
+        data-bs-toggle="collapse" data-bs-target="#collapse1">
+        What is Bi-Stretch Therapy in the Rotai R-NEXA massage chair?
+      </button>
+    </h3>
+    <div id="collapse1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+      <div class="accordion-body">
+        Bi-Stretch Therapy is an advanced stretching system designed to independently stretch the legs and lower body while improving flexibility, reducing stiffness, supporting muscle recovery, and enhancing full body relaxation.
+      </div>
+    </div>
+  </div>
+
+  <!-- 2 -->
+  <div class="accordion-item">
+    <h3 class="accordion-header" id="heading2">
+      <button class="accordion-button rounded-pill collapsed" type="button"
+        data-bs-toggle="collapse" data-bs-target="#collapse2">
+        How does the Dual-Core massage mechanism work in the Rotai R-NEXA?
+      </button>
+    </h3>
+    <div id="collapse2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+      <div class="accordion-body">
+        The Rotai R-NEXA features a Dual-Core 4D + 3D massage mechanism that delivers synchronized upper and lower body massage movements for a more precise and realistic massage experience.
+      </div>
+    </div>
+  </div>
+
+  <!-- 3 -->
+  <div class="accordion-item">
+    <h3 class="accordion-header" id="heading3">
+      <button class="accordion-button rounded-pill collapsed" type="button"
+        data-bs-toggle="collapse" data-bs-target="#collapse3">
+        How many auto massage programs are available in the Rotai R-NEXA?
+      </button>
+    </h3>
+    <div id="collapse3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+      <div class="accordion-body">
+        The Rotai R-NEXA includes 29 intelligent automatic massage programs designed for relaxation, stretching, recovery, stress relief, deep tissue massage, and full body wellness.
+      </div>
+    </div>
+  </div>
+
+  <!-- 4 -->
+  <div class="accordion-item">
+    <h3 class="accordion-header" id="heading4">
+      <button class="accordion-button rounded-pill collapsed" type="button"
+        data-bs-toggle="collapse" data-bs-target="#collapse4">
+        Does the Rotai R-NEXA include Zero Gravity recline?
+      </button>
+    </h3>
+    <div id="collapse4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+      <div class="accordion-body">
+        Yes, the R-NEXA features dual Zero Gravity positions that help reduce spinal pressure, improve circulation, and enhance massage comfort for deeper relaxation.
+      </div>
+    </div>
+  </div>
+
+  <!-- 5 -->
+  <div class="accordion-item">
+    <h3 class="accordion-header" id="heading5">
+      <button class="accordion-button rounded-pill collapsed" type="button"
+        data-bs-toggle="collapse" data-bs-target="#collapse5">
+        Does the Rotai R-NEXA support AI body scanning?
+      </button>
+    </h3>
+    <div id="collapse5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+      <div class="accordion-body">
+        Yes, the intelligent Hall Sensor body detection system scans body shape, height, shoulder position, and pressure points to provide a personalized massage experience.
+      </div>
+    </div>
+  </div>
+
+  <!-- 6 -->
+  <div class="accordion-item">
+    <h3 class="accordion-header" id="heading6">
+      <button class="accordion-button rounded-pill collapsed" type="button"
+        data-bs-toggle="collapse" data-bs-target="#collapse6">
+        Does the Rotai R-NEXA massage chair include foot roller massage?
+      </button>
+    </h3>
+    <div id="collapse6" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+      <div class="accordion-body">
+        Yes, the R-NEXA includes specialized foot roller massage technology designed to stimulate pressure points, improve circulation, and relax tired feet.
+      </div>
+    </div>
+  </div>
+
+  <!-- 7 -->
+  <div class="accordion-item">
+    <h3 class="accordion-header" id="heading7">
+      <button class="accordion-button rounded-pill collapsed" type="button"
+        data-bs-toggle="collapse" data-bs-target="#collapse7">
+        Does the Rotai R-NEXA include heating therapy?
+      </button>
+    </h3>
+    <div id="collapse7" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+      <div class="accordion-body">
+        Yes, the chair includes therapeutic heating functions for the waist, knees, and leg areas to help relax muscles, improve blood circulation, and enhance overall comfort.
+      </div>
+    </div>
+  </div>
+
+  <!-- 8 -->
+  <div class="accordion-item">
+    <h3 class="accordion-header" id="heading8">
+      <button class="accordion-button rounded-pill collapsed" type="button"
+        data-bs-toggle="collapse" data-bs-target="#collapse8">
+        Is the Rotai R-NEXA suitable for daily home wellness and stress relief?
+      </button>
+    </h3>
+    <div id="collapse8" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+      <div class="accordion-body">
+        Yes, the Rotai R-NEXA is designed for daily home wellness with intelligent massage programs, Bi-Stretch Therapy, air compression massage, and advanced recovery technologies for relaxation and muscle recovery.
+      </div>
+    </div>
+  </div>
+
+</div>
+
+</div>
+
+
+</div>
+</section>
+
+ <!-- R-Zenora Faqs  -->
+<section class="section-container bg-light-primary">
+<div class="container">
+
+<h2 class="mb-4 mb-md-5 text-center fade-up"> Frequently Asked Questions </h2>
+
+
+
+  <div class="faq-box fade-down">
+
+    <div class="accordion" id="faqAccordion">
+
+  <!-- 1 -->
+  <div class="accordion-item">
+    <h3 class="accordion-header" id="heading1">
+      <button class="accordion-button rounded-pill collapsed" type="button"
+        data-bs-toggle="collapse" data-bs-target="#collapse1">
+        What makes the Rotai ZENORA massage chair unique?
+      </button>
+    </h3>
+    <div id="collapse1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+      <div class="accordion-body">
+        The Rotai ZENORA combines advanced 3D deep tissue massage technology, AI body scanning, Zero Gravity recline, triple foot rollers, and a 36-airbag system to deliver a luxurious full body massage experience with personalized comfort.
+      </div>
+    </div>
+  </div>
+
+  <!-- 2 -->
+  <div class="accordion-item">
+    <h3 class="accordion-header" id="heading2">
+      <button class="accordion-button rounded-pill collapsed" type="button"
+        data-bs-toggle="collapse" data-bs-target="#collapse2">
+        Does the Rotai ZENORA support full body massage?
+      </button>
+    </h3>
+    <div id="collapse2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+      <div class="accordion-body">
+        Yes, the Rotai ZENORA is designed to provide full body massage coverage for the neck, shoulders, back, waist, hips, legs, calves, and feet using intelligent rollers, airbags, and stretching technologies.
+      </div>
+    </div>
+  </div>
+
+  <!-- 3 -->
+  <div class="accordion-item">
+    <h3 class="accordion-header" id="heading3">
+      <button class="accordion-button rounded-pill collapsed" type="button"
+        data-bs-toggle="collapse" data-bs-target="#collapse3">
+        What is AI body scanning in the Rotai ZENORA massage chair?
+      </button>
+    </h3>
+    <div id="collapse3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+      <div class="accordion-body">
+        The AI body scan technology automatically detects shoulder position, body shape, and pressure
+         points to customize massage intensity and improve massage accuracy for a more personalized relaxation experience.
+      </div>
+    </div>
+  </div>
+
+  <!-- 4 -->
+  <div class="accordion-item">
+    <h3 class="accordion-header" id="heading4">
+      <button class="accordion-button rounded-pill collapsed" type="button"
+        data-bs-toggle="collapse" data-bs-target="#collapse4">
+        Does the Rotai ZENORA include Zero Gravity recline?
+      </button>
+    </h3>
+    <div id="collapse4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+      <div class="accordion-body">
+        Yes, the Rotai ZENORA features Zero Gravity positioning that reclines the body into a neutral posture to 
+        reduce spinal pressure, improve circulation, and enhance massage effectiveness.
+
+      </div>
+    </div>
+  </div>
+
+  <!-- 5 -->
+  <div class="accordion-item">
+    <h3 class="accordion-header" id="heading5">
+      <button class="accordion-button rounded-pill collapsed" type="button"
+        data-bs-toggle="collapse" data-bs-target="#collapse5">
+        How many automatic massage programs are available in the Rotai ZENORA?
+      </button>
+    </h3>
+    <div id="collapse5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+      <div class="accordion-body">
+        The Rotai ZENORA includes 24 intelligent automatic massage programs designed for relaxation, stretching, pain relief, wellness, and full body recovery.
+      </div>
+    </div>
+  </div>
+
+  <!-- 6 -->
+  <div class="accordion-item">
+    <h3 class="accordion-header" id="heading6">
+      <button class="accordion-button rounded-pill collapsed" type="button"
+        data-bs-toggle="collapse" data-bs-target="#collapse6">
+        Does the Rotai ZENORA massage chair include heating therapy?
+      </button>
+    </h3>
+    <div id="collapse6" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+      <div class="accordion-body">
+        Yes, the chair includes carbon fiber heating technology for the back area that helps improve
+         circulation, reduce stiffness, and enhance relaxation during massage sessions
+      </div>
+    </div>
+  </div>
+
+  <!-- 7 -->
+  <div class="accordion-item">
+    <h3 class="accordion-header" id="heading7">
+      <button class="accordion-button rounded-pill collapsed" type="button"
+        data-bs-toggle="collapse" data-bs-target="#collapse7">
+        What is the benefit of the SL-Track system in the Rotai ZENORA?
+      </button>
+    </h3>
+    <div id="collapse7" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+      <div class="accordion-body">
+      The super long SL-Track follows the natural curve of the spine from the neck to the thighs, providing 
+      smoother roller movement, better spinal support, and enhanced full body massage coverage.
+      </div>
+    </div>
+  </div>
+
+  <!-- 8 -->
+  <div class="accordion-item">
+    <h3 class="accordion-header" id="heading8">
+      <button class="accordion-button rounded-pill collapsed" type="button"
+        data-bs-toggle="collapse" data-bs-target="#collapse8">
+        Is the Rotai ZENORA suitable for stress relief and muscle recovery?
+      </button>
+    </h3>
+    <div id="collapse8" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+      <div class="accordion-body">
+      Yes, the Rotai ZENORA is designed to help reduce muscle stiffness, fatigue, body stress, and tension through deep
+       tissue massage, air compression therapy, foot rollers, and intelligent wellness programs.
+      </div>
+    </div>
+  </div>
+
+</div>
+
+</div>
+
+
+</div>
+</section>
+
+ <!-- R-Velor Faqs  -->
+<section class="section-container bg-light-primary">
+<div class="container">
+
+<h2 class="mb-4 mb-md-5 text-center fade-up"> Frequently Asked Questions </h2>
+
+
+
+  <div class="faq-box fade-down">
+
+
+<div class="accordion" id="faqAccordion">
+
+  <!-- 1 -->
+  <div class="accordion-item">
+    <h3 class="accordion-header" id="heading1">
+      <button class="accordion-button rounded-pill collapsed" type="button"
+        data-bs-toggle="collapse" data-bs-target="#collapse1">
+        What is ROVO-Walking technology in the Rotai R-VELOR massage chair?
+      </button>
+    </h3>
+    <div id="collapse1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+      <div class="accordion-body">
+        ROVO-Walking technology is an advanced stretching system inspired by Pilates and Yoga movements that helps improve flexibility, muscle recovery, circulation, and lower body relaxation through dynamic walking-style stretching motions.
+      </div>
+    </div>
+  </div>
+
+  <!-- 2 -->
+  <div class="accordion-item">
+    <h3 class="accordion-header" id="heading2">
+      <button class="accordion-button rounded-pill collapsed" type="button"
+        data-bs-toggle="collapse" data-bs-target="#collapse2">
+        Does the Rotai R-VELOR support full body massage?
+      </button>
+    </h3>
+    <div id="collapse2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+      <div class="accordion-body">
+        Yes, the Rotai R-VELOR provides full body massage coverage including the neck, shoulders, back, waist, hips, legs, calves, and feet using advanced 4D massage rollers, airbags, and stretching functions.
+      </div>
+    </div>
+  </div>
+
+  <!-- 3 -->
+  <div class="accordion-item">
+    <h3 class="accordion-header" id="heading3">
+      <button class="accordion-button rounded-pill collapsed" type="button"
+        data-bs-toggle="collapse" data-bs-target="#collapse3">
+        How many automatic massage programs are available in the R-VELOR massage chair?
+      </button>
+    </h3>
+    <div id="collapse3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+      <div class="accordion-body">
+        The Rotai R-VELOR includes 39 intelligent automatic massage programs along with specialized ROVO modes designed for stretching, recovery, relaxation, and deep muscle relief.
+      </div>
+    </div>
+  </div>
+
+  <!-- 4 -->
+  <div class="accordion-item">
+    <h3 class="accordion-header" id="heading4">
+      <button class="accordion-button rounded-pill collapsed" type="button"
+        data-bs-toggle="collapse" data-bs-target="#collapse4">
+        Does the R-VELOR massage chair include Zero Gravity recline?
+      </button>
+    </h3>
+    <div id="collapse4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+      <div class="accordion-body">
+        Yes, the R-VELOR massage chair features a Zero Gravity reclining system that helps reduce 
+        spinal pressure, improve blood circulation, and enhance massage effectiveness for deeper relaxation.
+      </div>
+    </div>
+  </div>
+
+  <!-- 5 -->
+  <div class="accordion-item">
+    <h3 class="accordion-header" id="heading5">
+      <button class="accordion-button rounded-pill collapsed" type="button"
+        data-bs-toggle="collapse" data-bs-target="#collapse5">
+        Is the Rotai R-VELOR suitable for back pain and muscle stiffness?
+      </button>
+    </h3>
+    <div id="collapse5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+      <div class="accordion-body">
+        The R-VELOR is designed to help reduce muscle tension, body stiffness, fatigue, and spinal stress through 4D deep tissue massage, infrared heating, air compression, and stretching therapy.
+      </div>
+    </div>
+  </div>
+
+  <!-- 6 -->
+  <div class="accordion-item">
+    <h3 class="accordion-header" id="heading6">
+      <button class="accordion-button rounded-pill collapsed" type="button"
+        data-bs-toggle="collapse" data-bs-target="#collapse6">
+        Does the Rotai R-VELOR include heating therapy?
+      </button>
+    </h3>
+    <div id="collapse6" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+      <div class="accordion-body">
+        Yes, the chair includes advanced infrared heating technology for the back, feet, and calves to help relax muscles, improve circulation, and enhance comfort during massage sessions.
+      </div>
+    </div>
+  </div>
+
+  <!-- 7 -->
+  <div class="accordion-item">
+    <h3 class="accordion-header" id="heading7">
+      <button class="accordion-button rounded-pill collapsed" type="button"
+        data-bs-toggle="collapse" data-bs-target="#collapse7">
+        What is the benefit of the extra-long L-Track system in R-VELOR?
+      </button>
+    </h3>
+    <div id="collapse7" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+      <div class="accordion-body">
+        The extra-long L-Track follows the natural curve of the spine and extends massage coverage from the neck to the hips and legs, providing better stretching, spinal support, and full body relaxation.
+      </div>
+    </div>
+  </div>
+
+  <!-- 8 -->
+  <div class="accordion-item">
+    <h3 class="accordion-header" id="heading8">
+      <button class="accordion-button rounded-pill collapsed" type="button"
+        data-bs-toggle="collapse" data-bs-target="#collapse8">
+        Does the R-VELOR massage chair support AI body scanning?
+      </button>
+    </h3>
+    <div id="collapse8" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+      <div class="accordion-body">
+        Yes, the R-VELOR features intelligent 4D PRO body shape detection technology that scans body structure, height, and pressure points to deliver a personalized massage experience with accurate pressure adjustment.
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+</div>
+
+
+</div>
+</section>
+
+
+<!-- section  Card Product -->
+<section class="section-container">
+    <div class="container">
+
+      <h2 class="mb-4 mb-md-5  text-center fade-up">You may also like</h2>
+
+
+
+
+      <div class="row g-3">
+
+
+
+
+
+        <div class="col-md-6 col-lg-3 fade-up">
+
+          <div class="product-card ">
+            <a href="r-velor.html" class="product-link">
+              <div class="product-image-wrapper">
+                <span class="badge-top">BEST SELLER</span>
+
+                <!-- Static Image (default) -->
+                <img src="images/R-VELOR/col-1/rt-8532-browndark-3.webp" alt="R-VELOR" class="static-img">
+
+                <!-- GIF Image (on hover) -->
+                <img src="images/R-VELOR/col-1/rt-8532-browndark-5.webp" alt="R-VELOR" class="gif-img">
+              </div>
+
+              <h5 class="product-title">R-VELOR</h5>
+              <p class="product-price">₹9,99,999</p>
+            </a>
+
+            <!-- Hover Buttons -->
+            <div class="action-buttons">
+              <button class="btn  add-to-wishlist-btn">
+                <i class="fas fa-heart"></i> <span> Wishlist </span>
+              </button>
+              <button class="btn  add-to-cart-btn" href="javascript:void(0)">
+                <i class="fas fa-cart-plus"></i> <span> Add to Cart </span>
+              </button>
+            </div>
+          </div>
+
+
+        </div>
+
+
+        <div class="col-md-6 col-lg-3 fade-up">
+
+          <div class="product-card ">
+            <a href="r-zenora.html" class="product-link">
+              <div class="product-image-wrapper">
+                <span class="badge-top">BEST SELLER</span>
+                <!-- Static Image (default) -->
+                <img src="images/R-ZENORA/col-2/rt-8630-light-3.webp" alt="R-ZENORA" class="static-img">
+
+                <!-- GIF Image (on hover) -->
+                <img src="images/R-ZENORA/col-2/rt-8630-light-4.webp" alt="R-ZENORA" class="gif-img">
+              </div>
+
+              <h5 class="product-title">R-ZENORA</h5>
+              <p class="product-price">₹7,99,999</p>
+            </a>
+
+            <!-- Hover Buttons -->
+            <div class="action-buttons">
+              <button class="btn  add-to-wishlist-btn">
+                <i class="fas fa-heart"></i> <span> Wishlist </span>
+              </button>
+              <button class="btn  add-to-cart-btn" href="javascript:void(0)">
+                <i class="fas fa-cart-plus"></i> <span> Add to Cart </span>
+              </button>
+            </div>
+
+          </div>
+
+
+        </div>
+
+
+
+
+
+
+      </div>
+
+    </div>
+</section>
+
+
+
+
+
+
+   <!-- DEALS FLOATING BUTTON -->
+ <div class="deals-floating-btn">
+  <a href="https://deals.humancarei.com/" target="_blank" rel="noopener noreferrer">
+    <span class="deal-icon">🔥</span>
+    <span class="deal-text"><span>Special</span> Deals</span>
+  </a>
+</div>
+
+
+  <!-- Footer -->
+
+
+  <footer class="footer-main">
+
+
+
+    <!-- Back to Top Button -->
+    <a href="#" id="backToTop" class="show">
+      <i class="fa-solid fa-arrow-up"></i>
+    </a>
+
+
+
+
+    <div class="container ">
+
+      <div class="contact-wrapper" tabindex="0">
+        <svg xmlns="http://www.w3.org/2000/svg" class="contact-icon" fill="none" viewBox="0 0 24 24"
+          stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false">
+          <path stroke-linecap="round" stroke-linejoin="round"
+            d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+        </svg>
+
+        <h2 class="contact-title">Have Questions or Concerns?</h2>
+        <p class="contact-subtitle">We’re here to help! Call us anytime.</p>
+        <a href="tel:919799979739" class="contact-btn"> +91-97999-79739 </a>
+      </div>
+
+    </div>
+
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 footer-logo">
+
+          <a href="index.html">
+            <img src="images/rotai-logo.png" alt="Rotai Logo">
+          </a>
+
+
+          <h5 class="fw-bold mb-2 text-white">Subscribe to our Newsletter</h5>
+          <p>Stay updated with the latest innovations, wellness tips, and exclusive Rotai offers—delivered straight to
+            your inbox.</p>
+
+          <form class="newsletter-form">
+            <input type="email" placeholder="Enter your email address" required="">
+            <button type="submit">
+              Subscribe <i class="fas fa-paper-plane"></i>
+            </button>
+          </form>
+
+        </div>
+
+        <div class="col-md-2 footer-links">
+          <h6>Products</h6>
+          <ul>
+            
+
+            <li><a href="r-velor.html">R-VELOR</a></li>
+             <li><a href="r-aurex.html">R-AUREX</a></li>
+            <li><a href="r-zenora.html">R-ZENORA</a></li>
+             <li><a href="coming-soon.html">R-RELX</a></li>
+           
+            <li><a href="shop.html">View All Products</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-2 footer-links">
+          <h6>Company</h6>
+          <ul>
+            <li><a href="about-us.html">About Us</a></li>
+            <li><a href="media.html">Media</a></li>
+            <li><a href="blogs.html">Blog</a></li>
+            <li><a href="contact-us.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-2 footer-links">
+          <h6>Support</h6>
+          <ul>
+            <li><a href="my-account.html">My Account</a></li>
+            <li><a href="faq.html">FAQs</a></li>
+
+          </ul>
+        </div>
+
+        <div class="col-md-2 footer-links">
+          <h6>Legal</h6>
+          <ul>
+            <li><a href="terms-of-use.html">Terms of Use</a></li>
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="refund-policy.html"> Refund Policy </a></li>
+            <li><a href="return-policy.html"> Return Policy </a></li>
+            <li><a href="shipping-policy.html">Shipping Policy</a></li>
+            <li><a href="warranty.html">Warranty</a></li>
+
+
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="row footer-bottom mt-3 mt-md-5 align-items-center">
+        <div class="col-md-6 text-center text-md-start mb-2 mb-md-0">
+          <p class="mb-0"> © 2025 Rotai. All rights reserved. Powered by <a href="https://humancarei.com/"
+              target="_blank"> HCI</a> </p>
+        </div>
+        <div class="col-md-6 text-center text-md-end">
+          <div class="social-icons">
+            <a href="https://www.facebook.com/humancareinternational" target="_blank" class="mx-1"><i
+                class="fab fa-facebook-f"></i></a>
+            <a href="https://x.com/humancarei" target="_blank" class="mx-1"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="https://www.instagram.com/hci_massagechair?igsh=MXA0cTN0d2txMjF3Nw==" target="_blank"
+              class="mx-1"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.youtube.com/channel/UC8OMz5bklRKBt2xyykh7kqg" target="_blank" class="mx-1"><i
+                class="fab fa-youtube"></i></a>
+          </div>
+
+
+
+        </div>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <div class="support-menu-btn" id="supportmenuBtn">
+        <i class="fas fa-bars"></i> <span class="weareLive">We are live</span>
+      </div>
+
+      <!-- Support CTA Button -->
+      <div class="support-buttons" id="supportButtons">
+        <a href="https://wa.me/919799979739?text=Hi%2C%20I%20just%20visited%20your%20Rotai%20website.%20Can%20you%20please%20tell%20me%20more%3F"
+          class="btn whatsapp" target="_blank">
+          <i class="fa-brands fa-whatsapp"></i>
+        </a>
+
+        <a href="tel:+919799979739" class="btn call">
+          <i class="fa-solid fa-phone"></i>
+        </a>
+
+        <a href="{% url 'core:bookings' %}" class="btn schedule">
+          <i class="fa-regular fa-calendar-days"></i>
+        </a>
+
+        <button class="btn chat" onclick="toggleChat()">
+          <i class="fa-solid fa-comments"></i>
+        </button>
+      </div>
+
+
+
+
+    </div>
+  </footer>
+
+
+
+  <!-- Bootstrap Bundle JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Detail Img Zoom / Color Option-->
+ <script>
+/* ================= PRODUCT IMAGE SETS ================= */
+const productImages = {
+  "col-1": [
+    "images/R-AUREX/col-1/rt-8802-whitegray-10.webp",
+    "images/R-AUREX/col-1/rt-8802-whitegray-3.webp",
+    "images/R-AUREX/col-1/rt-8802-whitegray-2.webp",
+    "images/R-AUREX/col-1/rt-8802-whitegray-9.webp"
+  ],
+  "col-2": [
+    "images/R-AUREX/col-2/rt-8802-darkbrown-3.webp",
+    "images/R-AUREX/col-2/rt-8802-darkbrown-1.webp",
+    "images/R-AUREX/col-2/rt-8802-darkbrown-2.webp",
+    "images/R-AUREX/col-2/rt-8802-darkbrown-5.webp"
+  ]
+};
+
+/* ================= ELEMENTS ================= */
+const mainImage = document.getElementById("mainImage");
+const thumbnails = document.getElementById("thumbnails");
+const prevBtn = document.querySelector(".thumb-arrow.left");
+const nextBtn = document.querySelector(".thumb-arrow.right");
+const zoomContainer = document.querySelector(".zoom-container");
+
+let thumbs = [];
+let currentIndex = 0;
+
+/* ================= INIT SLIDER ================= */
+function initSlider() {
+  thumbs = thumbnails.querySelectorAll(".thumbnail-img");
+  currentIndex = 0;
+
+  thumbs.forEach((thumb, index) => {
+    thumb.addEventListener("click", () => slideTo(index));
+  });
+
+  updateArrows();
+}
+
+/* ================= SLIDE CORE ================= */
+function slideTo(index) {
+  if (!thumbs.length) return;
+
+  thumbs[currentIndex].classList.remove("active");
+  currentIndex = index;
+  thumbs[currentIndex].classList.add("active");
+
+  mainImage.src = thumbs[currentIndex].src;
+
+  thumbs[currentIndex].scrollIntoView({
+    behavior: "smooth",
+    inline: "center",
+    block: "nearest"
+  });
+
+  updateArrows();
+}
+
+/* ================= ARROWS ================= */
+function updateArrows() {
+  prevBtn.classList.toggle("disabled", currentIndex === 0);
+  nextBtn.classList.toggle("disabled", currentIndex === thumbs.length - 1);
+}
+
+nextBtn.addEventListener("click", () => {
+  if (currentIndex < thumbs.length - 1) slideTo(currentIndex + 1);
+});
+
+prevBtn.addEventListener("click", () => {
+  if (currentIndex > 0) slideTo(currentIndex - 1);
+});
+
+/* ================= VARIANT LOAD (SAFE) ================= */
+function loadSet(set, circle) {
+  document.querySelectorAll(".color-circle")
+    .forEach(c => c.classList.remove("active"));
+  circle.classList.add("active");
+
+  thumbnails.innerHTML = "";
+
+  productImages[set].forEach((src, i) => {
+    const img = document.createElement("img");
+    img.src = src;
+    img.className = "thumbnail-img" + (i === 0 ? " active" : "");
+    thumbnails.appendChild(img);
+  });
+
+  mainImage.src = productImages[set][0];
+  initSlider(); // 🔥 important
+}
+
+/* ================= MOBILE SWIPE ================= */
+let startX = 0;
+
+thumbnails.addEventListener("touchstart", e => {
+  startX = e.touches[0].clientX;
+});
+
+thumbnails.addEventListener("touchend", e => {
+  const endX = e.changedTouches[0].clientX;
+  if (startX - endX > 50 && currentIndex < thumbs.length - 1) {
+    slideTo(currentIndex + 1);
+  }
+  if (endX - startX > 50 && currentIndex > 0) {
+    slideTo(currentIndex - 1);
+  }
+});
+
+/* ================= ZOOM EFFECT (UNCHANGED & SAFE) ================= */
+zoomContainer.addEventListener("mousemove", e => {
+  const rect = zoomContainer.getBoundingClientRect();
+  const x = ((e.clientX - rect.left) / rect.width) * 100;
+  const y = ((e.clientY - rect.top) / rect.height) * 100;
+  mainImage.style.transformOrigin = `${x}% ${y}%`;
+  mainImage.style.transform = "scale(2)";
+});
+
+zoomContainer.addEventListener("mouseleave", () => {
+  mainImage.style.transform = "scale(1)";
+});
+
+/* ================= DEFAULT LOAD ================= */
+loadSet("col-1", document.querySelector(".color-circle.active"));
+</script>
+
+
+  <!-- Qty Button -->
+  <script src="js/qtybutton.js"></script>
+  <!-- Mobile Menu -->
+  <script src="js/mobilemenu.js"></script>
+  <!-- Animate Scroll JS -->
+  <script src="js/animatescroll.js"></script>
+  <!-- Product Slider JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <script src="js/productslider.js"></script>
+
+  
+ <!-- support btn menu Scroll JS -->
+  <script src="js/supportbtnmenu.js"></script>
+ <!-- Back to Top Scroll JS -->
+  <script src="js/backtotop.js"></script>
+
+  <!-- Deals Floting  Scroll JS -->
+  <script src="js/dealsfloting.js"></script>
+
+</body>
+
+</html>

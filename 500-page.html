@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>500 - Internal Server Error</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  height: 100vh;
+  background: linear-gradient(135deg, #6eb5ff, #a3cfff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #1a3c72;
+  text-align: center;
+  overflow: hidden;
+}
+
+.container {
+  max-width: 600px;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 8rem;
+  font-weight: 700;
+  margin: 0;
+  animation: fadeInDown 1s ease-in-out;
+}
+
+h2 {
+  font-size: 1.8rem;
+  margin: 10px 0;
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+p {
+  font-size: 1rem;
+  margin-bottom: 30px;
+  opacity: 0.9;
+  animation: fadeInUp 1.4s ease-in-out;
+}
+
+a.button {
+  display: inline-block;
+  padding: 12px 25px;
+  font-size: 1rem;
+  color: #fff;
+  text-decoration: none;
+  background: linear-gradient(90deg, #4063b0, #6e89d6);
+  border-radius: 50px;
+  transition: 0.3s ease;
+  animation: fadeInUp 1.6s ease-in-out;
+}
+
+a.button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+/* Massage Chair Animation */
+.chair {
+  width: 180px;
+  animation: shake 2s ease-in-out infinite;
+  mix-blend-mode: multiply;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  20%, 60% { transform: translateX(-5px); }
+  40%, 80% { transform: translateX(5px); }
+}
+
+/* Fade Animations */
+@keyframes fadeInDown {
+  0% { opacity: 0; transform: translateY(-20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+  <h1>500</h1>
+  <img src="images/product-img.webp" alt="500 Massage Chair" class="chair">
+  <h2>Oops! Something Went Wrong</h2>
+  <p>Our massage chair is feeling overwhelmed and needs a quick reset. We’ll be back to comfort soon.</p>
+  <a href="index.html" class="button">Go Home</a>
+</div>
+
+</body>
+</html>

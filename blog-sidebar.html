@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redesigned Sidebar - ROTAI Blog</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: #f8f9fa;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .sidebar-main {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        /* Widget Base Styles */
+        .widget {
+            background: #ffffff;
+            border-radius: 16px;
+            padding: 28px;
+            margin-bottom: 24px;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .widget:hover {
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+            transform: translateY(-2px);
+        }
+
+        /* Widget Headings */
+        .widget-title,
+        .wp-block-heading {
+            font-size: 20px;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 20px;
+            padding-bottom: 12px;
+            border-bottom: 3px solid #667eea;
+            position: relative;
+        }
+
+        .wp-block-heading::before {
+            content: '';
+            position: absolute;
+            bottom: -3px;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 3px;
+        }
+
+        /* Search Widget */
+        .widget_search {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .widget_search .wp-block-search__label {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 16px;
+            display: block;
+            color: white;
+        }
+
+        .wp-block-search__inside-wrapper {
+            display: flex;
+            gap: 8px;
+            position: relative;
+        }
+
+        .wp-block-search__input {
+            flex: 1;
+            padding: 14px 18px;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 12px;
+            font-size: 15px;
+            background: rgba(255, 255, 255, 0.15);
+            color: white;
+            transition: all 0.3s ease;
+            outline: none;
+        }
+
+        .wp-block-search__input::placeholder {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .wp-block-search__input:focus {
+            background: rgba(255, 255, 255, 0.25);
+            border-color: rgba(255, 255, 255, 0.6);
+            box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.1);
+        }
+
+        .wp-block-search__button {
+            padding: 14px 24px;
+            background: white;
+            color: #667eea;
+            border: none;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 15px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+        }
+
+        .wp-block-search__button:hover {
+            background: #f8f9fa;
+            transform: scale(1.05);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Recent Posts Widget */
+        .wp-block-latest-posts__list {
+            list-style: none;
+        }
+
+        .wp-block-latest-posts__list > li {
+            margin-bottom: 20px;
+            padding: 16px;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            border-left: 4px solid transparent;
+            display: flex;
+            gap: 16px;
+            align-items: flex-start;
+        }
+
+        .wp-block-latest-posts__list > li:hover {
+            background: linear-gradient(135deg, #e9ecef 0%, #dee2e6 100%);
+            border-left-color: #667eea;
+            transform: translateX(4px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15);
+        }
+
+        .wp-block-latest-posts__list > li:last-child {
+            margin-bottom: 0;
+        }
+
+        .wp-block-latest-posts__featured-image {
+            flex-shrink: 0;
+        }
+
+        .wp-block-latest-posts__featured-image img {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .wp-block-latest-posts__list > li:hover .wp-block-latest-posts__featured-image img {
+            transform: scale(1.05);
+        }
+
+        .wp-block-latest-posts__post-title {
+            color: #2c3e50;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 15px;
+            line-height: 1.5;
+            display: block;
+            transition: color 0.3s ease;
+        }
+
+        .wp-block-latest-posts__post-title:hover {
+            color: #667eea;
+        }
+
+        /* Recent Comments Widget */
+        .no-comments {
+            text-align: center;
+            padding: 32px 20px;
+            color: #6c757d;
+            font-size: 15px;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            border-radius: 12px;
+            border: 2px dashed #dee2e6;
+        }
+
+        /* Archives Widget */
+        .wp-block-archives-list {
+            list-style: none;
+        }
+
+        .wp-block-archives-list li {
+            margin-bottom: 12px;
+        }
+
+        .wp-block-archives-list li:last-child {
+            margin-bottom: 0;
+        }
+
+        .wp-block-archives-list a {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 14px 18px;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            border-radius: 10px;
+            color: #2c3e50;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 15px;
+            transition: all 0.3s ease;
+            border-left: 3px solid transparent;
+        }
+
+        .wp-block-archives-list a:hover {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-left-color: white;
+            transform: translateX(6px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+        }
+
+        .wp-block-archives-list a::after {
+            content: '→';
+            font-size: 18px;
+            transition: transform 0.3s ease;
+        }
+
+        .wp-block-archives-list a:hover::after {
+            transform: translateX(4px);
+        }
+
+        /* Categories Widget */
+        .wp-block-categories-list {
+            list-style: none;
+        }
+
+        .wp-block-categories-list .cat-item {
+            margin-bottom: 12px;
+        }
+
+        .wp-block-categories-list .cat-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .wp-block-categories-list a {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 14px 18px;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            border-radius: 10px;
+            color: #2c3e50;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 15px;
+            transition: all 0.3s ease;
+            border-left: 3px solid transparent;
+        }
+
+        .wp-block-categories-list a:hover {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-left-color: white;
+            transform: translateX(6px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+        }
+
+        .wp-block-categories-list a::after {
+            content: '📁';
+            font-size: 18px;
+            transition: transform 0.3s ease;
+        }
+
+        .wp-block-categories-list a:hover::after {
+            transform: scale(1.2);
+        }
+
+        /* Table of Contents Widget */
+        #ez_toc_widget_sticky-2 {
+            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+            border: 2px solid #e9ecef;
+            position: sticky;
+            top: 20px;
+        }
+
+        .ez-toc-widget-sticky-container {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+        }
+
+        .ez-toc-widget-sticky-title-container {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .ez-toc-widget-sticky-title {
+            color: white !important;
+            font-size: 18px !important;
+            font-weight: 600 !important;
+            margin: 0 !important;
+        }
+
+        .ez-toc-widget-sticky-toggle {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 8px 12px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .ez-toc-widget-sticky-toggle:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        .ez-toc-widget-sticky-list {
+            list-style: none;
+            padding: 20px;
+        }
+
+        .ez-toc-widget-sticky-list li {
+            margin-bottom: 8px;
+        }
+
+        .ez-toc-widget-sticky-list li a {
+            display: block;
+            padding: 12px 16px;
+            color: #495057;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            border-left: 3px solid transparent;
+        }
+
+        .ez-toc-widget-sticky-list li a:hover {
+            background: #f8f9fa;
+            color: #667eea;
+            border-left-color: #667eea;
+            transform: translateX(4px);
+        }
+
+        .ez-toc-widget-sticky-list li.active > a {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white !important;
+            border-left-color: white;
+            font-weight: 600;
+        }
+
+        /* Nested TOC Lists */
+        .ez-toc-widget-sticky-list-level-3 {
+            padding-left: 20px;
+            margin-top: 8px;
+        }
+
+        .ez-toc-widget-sticky-list-level-5 {
+            padding-left: 20px;
+            margin-top: 4px;
+        }
+
+        /* Mobile Close Button */
+        .ez-toc-mobile-close-btn {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            background: rgba(255, 255, 255, 0.2);
+            border: none;
+            color: white;
+            font-size: 24px;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .ez-toc-mobile-close-btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: rotate(90deg);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .sidebar-main {
+                max-width: 100%;
+            }
+
+            body {
+                padding: 15px;
+            }
+
+            .widget {
+                padding: 20px;
+                margin-bottom: 20px;
+            }
+
+            .wp-block-latest-posts__list > li {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .wp-block-latest-posts__featured-image {
+                margin: 0 auto;
+            }
+
+            .ez-toc-mobile-close-btn {
+                display: flex;
+            }
+
+            #ez_toc_widget_sticky-2 {
+                position: relative;
+            }
+        }
+
+        /* Animations */
+        @keyframes slideInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .widget {
+            animation: slideInUp 0.5s ease-out;
+        }
+
+        .widget:nth-child(1) { animation-delay: 0s; }
+        .widget:nth-child(2) { animation-delay: 0.1s; }
+        .widget:nth-child(3) { animation-delay: 0.2s; }
+        .widget:nth-child(4) { animation-delay: 0.3s; }
+        .widget:nth-child(5) { animation-delay: 0.4s; }
+        .widget:nth-child(6) { animation-delay: 0.5s; }
+        .widget:nth-child(7) { animation-delay: 0.6s; }
+
+        /* Scrollbar Styling */
+        .ez-toc-widget-sticky-list::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .ez-toc-widget-sticky-list::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+
+        .ez-toc-widget-sticky-list::-webkit-scrollbar-thumb {
+            background: #667eea;
+            border-radius: 10px;
+        }
+
+        .ez-toc-widget-sticky-list::-webkit-scrollbar-thumb:hover {
+            background: #764ba2;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar-main">
+        
+        <!-- Search Widget -->
+        <aside id="block-2" class="widget widget_block widget_search">
+            <form role="search" method="get" action="https://blog.rotai.in/" class="wp-block-search__button-outside wp-block-search__text-button wp-block-search">
+                <label class="wp-block-search__label" for="wp-block-search__input-1">🔍 Search</label>
+                <div class="wp-block-search__inside-wrapper">
+                    <input class="wp-block-search__input" id="wp-block-search__input-1" placeholder="Search articles..." value="" type="search" name="s" required>
+                    <button aria-label="Search" class="wp-block-search__button wp-element-button" type="submit">Search</button>
+                </div>
+            </form>
+        </aside>
+
+        <!-- Recent Posts Widget -->
+        <aside id="block-3" class="widget widget_block">
+            <div class="wp-block-group is-layout-flow wp-block-group-is-layout-flow">
+                <h2 class="wp-block-heading">📌 Recent Posts</h2>
+                <ul class="wp-block-latest-posts__list wp-block-latest-posts">
+                    <li>
+                        <div class="wp-block-latest-posts__featured-image">
+                            <img loading="lazy" decoding="async" width="150" height="150" src="https://blog.rotai.in/wp-content/uploads/2026/01/rotai-r-aurex-the-future-of-relaxation-luxury-full-body-massage-chair-150x150.jpeg" class="attachment-thumbnail size-thumbnail wp-post-image" alt="Luxury full-body massage chair">
+                        </div>
+                        <a class="wp-block-latest-posts__post-title" href="https://blog.rotai.in/luxury-massage-chair/rotai-r-aurex-luxury-full-body-massage-chair/">Rotai R-AUREX Luxury Full Body Massage Chair: Advanced Japanese Wellness for Modern Homes</a>
+                    </li>
+                    <li>
+                        <div class="wp-block-latest-posts__featured-image">
+                            <img loading="lazy" decoding="async" width="150" height="150" src="https://blog.rotai.in/wp-content/uploads/2026/01/rotai-zenora-luxury-wellness-for-modern-indian-lifestyles-150x150.jpeg" class="attachment-thumbnail size-thumbnail wp-post-image" alt="Rotai Zenora luxury wellness chair">
+                        </div>
+                        <a class="wp-block-latest-posts__post-title" href="https://blog.rotai.in/luxury-massage-chair/rotai-zenora-best-luxury-full-body-massage/">Rotai Zenora Best Luxury Full Body Massage Chair in India</a>
+                    </li>
+                    <li>
+                        <div class="wp-block-latest-posts__featured-image">
+                            <img loading="lazy" decoding="async" width="150" height="150" src="https://blog.rotai.in/wp-content/uploads/2026/01/rota-r-velor-luxury-massage-chair-150x150.jpeg" class="attachment-thumbnail size-thumbnail wp-post-image" alt="Rotai R-Velor luxury massage chair">
+                        </div>
+                        <a class="wp-block-latest-posts__post-title" href="https://blog.rotai.in/luxury-massage-chair/rotai-r-velor-a-new-benchmark-in-luxury-premium-massage-chairs-by-rotai/">Rotai R-Velor: A New Benchmark in Luxury & Premium Massage Chairs From Rotai</a>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+
+        <!-- Recent Comments Widget -->
+        <aside id="block-4" class="widget widget_block">
+            <div class="wp-block-group is-layout-flow wp-block-group-is-layout-flow">
+                <h2 class="wp-block-heading">💬 Recent Comments</h2>
+                <div class="no-comments wp-block-latest-comments">No comments to show.</div>
+            </div>
+        </aside>
+
+        <!-- Archives Widget -->
+        <aside id="block-5" class="widget widget_block">
+            <div class="wp-block-group is-layout-flow wp-block-group-is-layout-flow">
+                <h2 class="wp-block-heading">📅 Archives</h2>
+                <ul class="wp-block-archives-list wp-block-archives">
+                    <li><a href="https://blog.rotai.in/2026/01/">January 2026</a></li>
+                </ul>
+            </div>
+        </aside>
+
+        <!-- Categories Widget -->
+        <aside id="block-6" class="widget widget_block">
+            <div class="wp-block-group is-layout-flow wp-block-group-is-layout-flow">
+                <h2 class="wp-block-heading">📂 Categories</h2>
+                <ul class="wp-block-categories-list wp-block-categories">
+                    <li class="cat-item cat-item-3">
+                        <a href="https://blog.rotai.in/category/luxury-massage-chair/">Luxury Massage Chair</a>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+
+        <!-- Table of Contents Widget -->
+        <aside id="ez_toc_widget_sticky-2" class="widget ez-toc-widget-sticky">
+            <div id="ez-toc-widget-sticky-container" class="ez-toc-widget-sticky-container">
+                <div class="ez-toc-widget-sticky-content">
+                    <button class="ez-toc-mobile-close-btn" aria-label="Close Table of Contents">×</button>
+                    
+                    <h2 class="widget-title">
+                        <span class="ez-toc-widget-sticky-title-container">
+                            <span class="ez-toc-widget-sticky-title">📋 Table of Contents</span>
+                            <a href="#" class="ez-toc-widget-sticky-toggle" aria-label="Toggle TOC">
+                                <span>Toggle</span>
+                            </a>
+                        </span>
+                    </h2>
+                    
+                    <nav>
+                        <ul class="ez-toc-widget-sticky-list ez-toc-widget-sticky-list-level-1">
+                            <li class="ez-toc-widget-sticky-page-1 active">
+                                <a class="ez-toc-link" href="#What_Makes_a_Massage_Chair_Truly_a_Luxury_Premium_Experience">What Makes a Massage Chair Truly a Luxury & Premium Experience?</a>
+                            </li>
+                            <li class="ez-toc-widget-sticky-page-1">
+                                <a class="ez-toc-link" href="#Why_Luxury_Massage_Chairs_Are_in_High_Demand">Why Luxury Massage Chairs Are in High Demand</a>
+                            </li>
+                            <li class="ez-toc-widget-sticky-page-1">
+                                <a class="ez-toc-link" href="#Introducing_Rotai_R-Velor_Massage_Chair">Introducing Rotai R-Velor Massage Chair</a>
+                            </li>
+                            <li class="ez-toc-widget-sticky-page-1">
+                                <a class="ez-toc-link" href="#Key_Features_of_Rotai_R-Velor_Luxury_Massage_Chair">Key Features of Rotai R-Velor Luxury Massage Chair</a>
+                            </li>
+                            <li class="ez-toc-widget-sticky-page-1">
+                                <a class="ez-toc-link" href="#Health_Wellness_Benefits_of_Rotai_R-Velor">Health & Wellness Benefits of Rotai R-Velor</a>
+                            </li>
+                            <li class="ez-toc-widget-sticky-page-1">
+                                <a class="ez-toc-link" href="#FAQs_About_Rotai_R-Velor_Luxury_Massage_Chair">FAQs About Rotai R-Velor Luxury Massage Chair</a>
+                                <ul class="ez-toc-widget-sticky-list-level-3">
+                                    <li><a href="#Is_Rotai_R-Velor_suitable_for_people_with_back_pain">Is Rotai R-Velor suitable for people with back pain?</a></li>
+                                    <li><a href="#Can_multiple_family_members_use">Can multiple family members use the chair?</a></li>
+                                    <li><a href="#How_does_zero-gravity_benefit">How does zero-gravity benefit the body?</a></li>
+                                </ul>
+                            </li>
+                            <li class="ez-toc-widget-sticky-page-1">
+                                <a class="ez-toc-link" href="#Conclusion">Conclusion: Experience Next-Level Relaxation</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </aside>
+
+    </div>
+
+    <script>
+        // Smooth scroll for TOC links
+        document.querySelectorAll('.ez-toc-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+                
+                // Update active state
+                document.querySelectorAll('.ez-toc-widget-sticky-list li').forEach(li => {
+                    li.classList.remove('active');
+                });
+                this.closest('li').classList.add('active');
+            });
+        });
+
+        // Toggle TOC
+        document.querySelector('.ez-toc-widget-sticky-toggle').addEventListener('click', function(e) {
+            e.preventDefault();
+            const tocList = document.querySelector('.ez-toc-widget-sticky-list');
+            tocList.style.display = tocList.style.display === 'none' ? 'block' : 'none';
+        });
+
+        // Mobile close button
+        document.querySelector('.ez-toc-mobile-close-btn').addEventListener('click', function() {
+            this.closest('.ez-toc-widget-sticky-container').style.display = 'none';
+        });
+    </script>
+</body>
+</html>

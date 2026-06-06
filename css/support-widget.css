@@ -1,0 +1,348 @@
+/* ===============================
+   Floating Support Buttons
+================================ */
+.support-buttons {
+  position: fixed;
+  left: 18px;
+  bottom: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 9999;
+}
+
+.support-buttons .btn {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  background: #a2a2a2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  color: #ffffff;
+}
+
+.support-buttons .btn:hover {
+  transform: scale(1.08);
+  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.35);
+  background: #838383;
+}
+
+/* Individual buttons */
+.btn.whatsapp {
+  background: #25D366;
+
+}
+
+.btn.whatsapp i {
+  font-size: 24px;
+}
+
+
+
+/* ===============================
+   Popup
+================================ */
+.chat-popup {
+  position: fixed;
+  right: -380px;
+  bottom: 30px;
+  width: 360px;
+  height: 440px;
+  background: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.35);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: right 0.35s ease;
+  z-index: 9999;
+}
+
+.chat-popup.active {
+  right: 90px;
+}
+
+/* Header */
+.chat-header {
+  background: #aacdf770;
+  color: #fff;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.chat-header span {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.chat-header button {
+  border: none;
+  font-size: 12px;
+  cursor: pointer;
+  background: #1f4985;
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  color: #fff;
+  transition: color .3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Body */
+.chat-body {
+  flex: 1;
+  padding: 18px;
+  font-size: 14px;
+  background: #f5f5f5;
+  height: 100%;
+}
+
+
+.chat-popup h3 {
+  font-size: 20px;
+}
+
+/* Footer */
+.chat-footer {
+  display: flex;
+  border-top: 1px solid #ddd;
+  background: #fff;
+
+}
+
+.chat-footer input {
+  flex: 1;
+  border: none;
+  padding: 14px;
+  font-size: 14px;
+  outline: none;
+}
+
+.chat-footer button {
+  width: 56px;
+  border: none;
+  background: #111;
+  color: #fff;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+/* Chat Views */
+.chat-view {
+  display: none;
+  flex: 1;
+
+  overflow-y: auto;
+}
+
+.chat-view.active {
+  display: block;
+}
+
+/* Back button */
+.back-btn {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* Home Card */
+.chat-card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 14px;
+  margin-top: 20px;
+
+  cursor: pointer;
+  color: #555;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+}
+
+.chat-card p {
+  font-size: 13px;
+  color: #555;
+}
+
+/* Conversation */
+.chat-message {
+  color: #555;
+  background: #fff;
+  padding: 14px;
+  border-radius: 12px;
+  margin-bottom: 16px;
+  font-size: 14px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+}
+
+.chat-message .time {
+  display: block;
+  font-size: 11px;
+  color: #999;
+  margin-top: 6px;
+}
+
+/* Quick actions */
+.quick-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.quick-actions button {
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 8px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.quick-actions button:hover {
+  background: #f5f5f5;
+}
+
+/* ===============================
+   CTA Form
+================================ */
+
+
+.chat-body .form-group label {
+  /* font-size: 13px; */
+  /* font-weight: 500; */
+  display: block;
+  margin-bottom: 6px;
+  color: #000000;
+}
+
+.chat-body .form-group span {
+  color: red;
+}
+
+
+
+.chat-body .form-group input:focus {
+  border-color: #1f4985;
+}
+
+/* Buttons */
+.form-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 24px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  justify-content: center;
+  background: #ffffff;
+  padding: 10px;
+}
+
+.continue-btn,
+.cancel-btn {
+  border-radius: 8px;
+  font-size: 13px;
+}
+
+
+
+/* ===============================
+   Mobile Optimization
+================================ */
+@media (max-width: 480px) {
+  .chat-popup {
+    width: 92%;
+    right: -100%;
+    bottom: 20px;
+
+  }
+
+  .chat-popup.active {
+    right: 4%;
+  }
+}
+
+
+@media (max-width: 767px) {
+
+  .support-buttons {
+    /* Hidden by default */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(15px);
+    transition: all 0.3s ease;
+    left: 15px;
+    bottom: 120px;
+  }
+
+
+
+  /* Active state → buttons visible */
+  .support-buttons.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  /* Individual Button Styling */
+  .support-buttons .btn {
+    transition: transform 0.2s ease, background-color 0.2s ease;
+  }
+
+
+/* Support Menu Button */
+.support-menu-btn {
+  position: fixed;
+  bottom: 60px;
+  left: 15px;
+  z-index: 1;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;             /* circular by default */
+  background-color: #ffffff;      /* orange accent */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;      /* smooth radius & width change */
+  padding: 0 10px;                /* for text spacing when visible */
+  overflow: hidden;
+  white-space: nowrap;            /* text stays in one line */
+  color: #22457f;
+}
+
+  /* Icon inside menu button */
+  .support-menu-btn i {
+    font-size: 24px;
+    color: #22457f;
+  }
+  
+  
+  .weareLive {
+    padding-left: 10px;
+}
+
+
+}
+
+
+
+@media (min-width: 768px) {
+
+.support-menu-btn{display: none;}
+
+
+
+}

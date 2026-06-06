@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title></title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+<!-- Favicon -->
+<link href="./images/favicon.ico" rel="shortcut icon">
+
+
+
+<!-- jsPDF & html2canvas (for PDF download) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<!-- QR Code Library -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+ <!-- Meta tag JS -->
+<script src="js/meta.js"></script>
+
+
+</head>
+<body style="margin:0; padding:0; font-family:Arial, sans-serif; background:#dfe2e7;">
+
+<!-- Buttons -->
+<div style="text-align:center; margin:10px;">
+  <button onclick="downloadPDF()" 
+    style="background-color:#2e5aad; -webkit-print-color-adjust: exact;
+    print-color-adjust: exact; color:#fff; border:none; padding:6px 14px; 
+    font-size:12px; border-radius:6px; cursor:pointer; margin-right:8px;">
+    ⬇ Download PDF
+  </button>
+  <button onclick="printInvoice()" 
+    style="background-color:#28a745; -webkit-print-color-adjust: exact;
+    print-color-adjust: exact; color:#fff; border:none; padding:6px 14px; 
+    font-size:12px; border-radius:6px; cursor:pointer;">
+    🖨 Print Invoice
+  </button>
+</div>
+
+<!-- Invoice Content -->
+<div id="invoice">
+<table align="center" cellpadding="0" cellspacing="0" width="800" 
+style="margin:15px auto; background-color:#fff; -webkit-print-color-adjust: exact;
+print-color-adjust: exact; border-radius:10px; 
+      box-shadow:0 2px 10px rgba(0,0,0,0.08); overflow:hidden;">
+
+<!-- Header -->
+<tr>
+<td style="background-color:#eff5fb; padding:15px 20px; color:#333;">
+<table width="100%">
+<tr>
+  <td align="left">
+    <img src="images/rotai-logo.png" alt="Rotai Logo" style="width:90px; vertical-align:middle;">
+  </td>
+  <td align="right" style="text-align:right; font-size:12px; color:#333;">
+    <h1 style="margin:0; font-size:20px; text-transform:uppercase; color:#2e5aad;">Invoice</h1>
+    <p style="margin:2px 0;"><strong>Invoice #:</strong> <span id="invoiceNo">HC-2025-000123</span></p>
+    <p style="margin:2px 0;"><strong>Order ID:</strong> ORD-987654</p>
+    <p style="margin:2px 0;"><strong>Date:</strong> September 11, 2025</p>
+    <p style="margin:2px 0;"><strong>Due:</strong> September 18, 2025</p>
+  </td>
+</tr>
+</table>
+</td>
+</tr>
+
+<!-- Store Info -->
+<tr>
+<td style="padding:10px 20px; font-size:12px; color:#555; border-bottom:1px solid #ddd;">
+<strong>Rotai — Massage Chair</strong><br>
+Shop No. 12, Wellness Plaza, MG Road, Jaipur, Rajasthan, India<br>
+Phone: +91 98765 43210 | Email: support@rotai.example
+</td>
+</tr>
+
+<!-- Billing & Shipping -->
+<tr>
+<td style="padding:15px 20px;">
+<table width="100%" cellpadding="0" cellspacing="0">
+<tr>
+  <td valign="top" width="50%" style="padding-right:10px;">
+    <h3 style="margin:0 0 3px; font-size:12px; color:#333; text-transform:uppercase;">Billing To</h3>
+    <p style="margin:0; font-size:12px; color:#555;">
+      Mr. Amit Sharma<br>
+      House 45, Green Enclave, Civil Lines<br>
+      Jaipur, Rajasthan, 302006<br>
+      Phone: +91 91234 56789<br>
+      Email: amit.sharma@example.com
+    </p>
+  </td>
+  <td valign="top" width="50%">
+    <h3 style="margin:0 0 3px; font-size:12px; color:#333; text-transform:uppercase;">Shipping To</h3>
+    <p style="margin:0; font-size:12px; color:#555;">
+      Ms. Pooja Verma<br>
+      Flat 3B, Lotus Residency, Malviya Nagar<br>
+      Jaipur, Rajasthan, 302017<br>
+      Phone: +91 99876 54321<br>
+      Email: pooja.verma@example.com
+    </p>
+  </td>
+</tr>
+</table>
+</td>
+</tr>
+
+<!-- Items Table -->
+<tr>
+<td style="padding:0 20px;">
+<table width="100%" cellpadding="0" cellspacing="0" style="border-collapse:collapse; font-size:12px; margin-top:5px;">
+<thead>
+  <tr style="background-color:#eff5fb; color:#333;">
+    <th align="center" style="padding:6px; font-size:11px;">#</th>
+    <th align="left" style="padding:6px; font-size:11px;">Product</th>
+    <th align="center" style="padding:6px; font-size:11px;">SKU</th>
+    <th align="center" style="padding:6px; font-size:11px;">Qty</th>
+    <th align="right" style="padding:6px; font-size:11px;">Unit Price</th>
+    <th align="right" style="padding:6px; font-size:11px;">Line Total</th>
+  </tr>
+</thead>
+<tbody>
+  <tr style="border-bottom:1px solid #ddd;">
+    <td align="center" style="padding:6px;">1</td>
+    <td style="padding:6px;">
+      <strong>Zenith Pro Full-Body Massage Chair — Black</strong><br>
+      Features: Zero-gravity, 4D rollers, Heat therapy, Bluetooth speakers<br>
+      Warranty: 2 years (parts & labor)
+    </td>
+    <td align="center" style="padding:6px;">MC-ZP-2025-BLK</td>
+    <td align="center" style="padding:6px;">1</td>
+    <td align="right" style="padding:6px;">₹139,990.00</td>
+    <td align="right" style="padding:6px;">₹139,990.00</td>
+  </tr>
+  <tr style="border-bottom:1px solid #ddd;">
+    <td align="center" style="padding:6px;">2</td>
+    <td style="padding:6px;">
+      <strong>Extended Protection Plan (3 yrs)</strong><br>
+      Covers accidental and electrical failures
+    </td>
+    <td align="center" style="padding:6px;">WARR-3Y</td>
+    <td align="center" style="padding:6px;">1</td>
+    <td align="right" style="padding:6px;">₹9,999.00</td>
+    <td align="right" style="padding:6px;">₹9,999.00</td>
+  </tr>
+</tbody>
+</table>
+</td>
+</tr>
+
+<!-- Totals -->
+<tr>
+<td style="padding:10px 20px;">
+<table width="100%" cellpadding="0" cellspacing="0" style="font-size:12px;">
+<tr>
+  <td align="right" style="padding:3px; color:#333;">Subtotal:</td>
+  <td align="right" style="padding:3px; font-weight:bold; width:120px;">₹149,989.00</td>
+</tr>
+<tr>
+  <td align="right" style="padding:3px; color:#333;">Shipping:</td>
+  <td align="right" style="padding:3px; font-weight:bold;">₹3,499.00</td>
+</tr>
+<tr>
+  <td align="right" style="padding:3px; color:#333;">GST (18%):</td>
+  <td align="right" style="padding:3px; font-weight:bold;">₹27,597.00</td>
+</tr>
+<tr>
+  <td align="right" style="padding:3px; color:#333;">Discount:</td>
+  <td align="right" style="padding:3px; font-weight:bold; color:#d00;">-₹5,000.00</td>
+</tr>
+<tr>
+  <td align="right" style="padding:3px; color:#333; font-size:13px;">Grand Total:</td>
+  <td align="right" style="padding:3px; font-weight:bold; font-size:13px;">₹175,085.00</td>
+</tr>
+</table>
+</td>
+</tr>
+
+<!-- Payment, Shipping & Notes -->
+<tr>
+<td style="padding:10px 20px; font-size:12px; color:#555;">
+<p><strong>Payment Method:</strong> Credit Card (Visa) ending ••11</p>
+<p><strong>Shipping Method:</strong> White-Glove Delivery — Includes assembly (3-5 business days)</p>
+<p><strong>Order Notes:</strong> Deliver between 10:00 AM - 5:00 PM. Call before delivery.</p>
+</td>
+</tr>
+
+<!-- Return Policy -->
+<tr>
+<td style="padding:10px 20px; font-size:11px; color:#555; border-top:1px solid #ddd;">
+<h3 style="margin:0 0 3px; font-size:12px; color:#333; text-transform:uppercase;">Return & Cancellation Policy</h3>
+<p style="margin:0 0 8px;">
+Returns accepted within 7 days of delivery in original packaging. Shipping and restocking fees may apply.<br>
+For cancellations, contact support within 24 hours of order placement.
+</p>
+<p><strong>Tax ID:</strong> GSTIN 08ABCDE1234F1Z5 | <strong>PAN:</strong> ABCDE1234F</p>
+<br>
+<p>Authorized Signature</p>
+<p style="margin:15px 0;">_______________________________</p>
+<p>For Rotai</p>
+
+<!-- QR Code Container -->
+<div id="qrcode" style="margin-top:10px; width:100px; height:100px;"></div>
+
+</td>
+</tr>
+
+<!-- Footer -->
+<tr>
+<td style="background-color:#eff5fb; color:#333; padding:10px 20px; font-size:11px;">
+<table width="100%">
+<tr>
+  <td align="left">&copy; 2025 Rotai. All rights reserved.</td>
+  <td align="right">📧  info@rotai.in | 📞 +91 97999-79739 </td>
+</tr>
+</table>
+</td>
+</tr>
+
+</table>
+</div>
+
+<!-- JS for PDF Download, Print & QR -->
+<script>
+function downloadPDF() {
+  const { jsPDF } = window.jspdf;
+  const invoice = document.getElementById("invoice");
+
+  html2canvas(invoice, { scale: 2 }).then(canvas => {
+    const imgData = canvas.toDataURL("image/png");
+    const pdf = new jsPDF("p", "mm", "a4");
+    const imgProps = pdf.getImageProperties(imgData);
+    const pdfWidth = pdf.internal.pageSize.getWidth();
+    const pdfHeight = (imgProps.height * pdfWidth) / imgProps.width;
+    pdf.addImage(imgData, "PNG", 0, 0, pdfWidth, pdfHeight);
+    pdf.save("invoice.pdf");
+  });
+}
+
+function printInvoice() {
+  window.print();
+}
+
+// Generate QR Code from Invoice Number
+window.onload = function() {
+  let invoiceNo = document.getElementById("invoiceNo").innerText;
+  let qrData = "https://rotai.example/invoice/" + invoiceNo; 
+
+  new QRCode(document.getElementById("qrcode"), {
+    text: qrData,
+    width: 100,
+    height: 100,
+    colorDark : "#000000",
+    colorLight : "#ffffff",
+    correctLevel : QRCode.CorrectLevel.H
+  });
+};
+</script>
+
+</body>
+</html>

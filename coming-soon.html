@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title></title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+   <!-- Meta tag JS -->
+<script src="js/meta.js"></script>
+<!-- Favicon CSS -->
+
+  <link href="./images/favicon.ico" rel="shortcut icon">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body {
+        font-family: 'Poppins', sans-serif;
+        background: url("./images/about-hero-banner.jpg") no-repeat center center/cover;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        color: #fff;
+        overflow: hidden;
+    }
+    /* Animated gradient overlay */
+    body::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(120deg, rgba(255,204,112,0.2), rgba(255,255,255,0.05), rgba(255,204,112,0.2));
+        background-size: 300% 300%;
+        animation: gradientMove 8s ease-in-out infinite;
+        z-index: 0;
+    }
+
+
+.btn-primary {
+    background: linear-gradient(90deg, #1a3c72, #4063b0);
+    border: none;
+    border-radius: 30px;
+        font-weight: 700;
+    padding: 12px 20px;
+    transition: background .4s, box-shadow .4s;
+    width: fit-content;
+    letter-spacing: 1.2px;
+    align-self: center;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+
+.btn-primary:hover {
+    background: linear-gradient(90deg, #2a4d9c, #1a3c72);
+}
+
+
+    @keyframes gradientMove {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+    }
+    body::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(0,0,0,0.6);
+        z-index: 0;
+    }
+    .container {
+        width: 95%;
+        position: relative;
+        z-index: 1;
+        text-align: center;
+        padding: 50px 30px;
+        max-width: 680px;
+        background: rgba(255, 255, 255, 0.08);
+        border-radius: 20px;
+        backdrop-filter: blur(14px);
+        box-shadow: 0 0 30px rgba(0,0,0,0.4);
+        animation: fadeInUp 1s ease-out;
+    }
+    @keyframes fadeInUp {
+        from { opacity: 0; transform: translateY(30px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+    h1 {
+        font-size: 3rem;
+        font-weight: 700;
+        margin-bottom: 15px;
+        color: #ffcc70;
+        letter-spacing: 1px;
+        text-shadow: 0 0 8px rgba(255,204,112,0.8);
+    }
+    p {
+        font-size: 1.15rem;
+        margin-bottom: 35px;
+        opacity: 0.9;
+    }
+   
+    
+</style>
+</head>
+<body>
+
+<!-- Section -->
+<div class="container">
+<h1>We’re Launching Soon!</h1>
+<p>Get ready for our new online product.</p>
+<a href="index.html" class="btn btn-primary mt-2 mb-4"><span>Back to home</span></a>
+</div>
+
+
+
+
+
+</body>
+
+
+
+</html>
