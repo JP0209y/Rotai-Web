@@ -1,0 +1,1582 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title> R-ZENORA </title>
+
+
+  <!-- Favicon CSS -->
+
+  <link href="./images/favicon.ico" rel="shortcut icon">
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap"
+    rel="stylesheet">
+
+
+
+  <!-- Bootstrap & Font Awesome -->
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="css/rotai-style.css">
+  <link rel="stylesheet" href="css/responsive-style.css">
+
+
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+
+</head>
+
+<body>
+
+
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <div class="container">
+      <div class="row align-items-center">
+
+        <div class="col-md-3 text-center text-md-start">
+
+
+          <a href="tel:919799979739"> <i class="fas fa-phone"></i> +91-97999-79739 </a>
+
+
+          <span class="mx-2">|</span>
+          <i class="fas fa-envelope"></i>
+          <a href="mailto:info@rotai.in">info@rotai.in</a>
+        </div>
+
+        <div class="col-md-6 text-center d-none d-md-block">
+          <div> <strong>Relax</strong>. <strong>Feel healthier</strong>. <strong>Live longer</strong>. Just 15
+            minutes a
+            day.</div>
+        </div>
+
+        <div class="col-md-3 text-center text-md-end">
+          <a href="https://www.facebook.com/humancareinternational" target="_blank" class="mx-1"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://x.com/humancarei" target="_blank" class="mx-1"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="https://www.instagram.com/hci_massagechair?igsh=MXA0cTN0d2txMjF3Nw==" target="_blank" class="mx-1"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.youtube.com/channel/UC8OMz5bklRKBt2xyykh7kqg" target="_blank" class="mx-1"><i class="fab fa-youtube"></i></a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- Search Bar + Logo + Icons -->
+  <div class="search-bar py-2">
+    <div class="container">
+      <div class="row align-items-center">
+
+        <!-- Search -->
+        <div class="col-md-4 text-center text-md-start">
+          <div class="search-box d-none d-md-block">
+            <input type="text" placeholder="Search...">
+            <i class="fas fa-search"></i>
+          </div>
+        </div>
+
+        <!-- Logo -->
+        <div class="col-6 col-md-4  text-start text-md-center">
+
+
+          <button class="btn btn-outline-primary  d-md-none me-2" id="menuBtn"> <i
+              class="fas fa-bars menu-icon"></i></button>
+
+
+          <a href="index.html" class="navbar-brand">
+            <img src="images/rotai-logo.png" alt="Rotai">
+          </a>
+        </div>
+
+        <!-- Icons -->
+        <div class="col-6 col-md-4 text-end">
+          <div class="d-inline-flex align-items-center gap-3">
+
+            <!-- Cart -->
+               <a href="cart.html" class="icon-link position-relative">
+<i class="fas fa-shopping-cart fa-lg"></i>
+<span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+id="cart-counter">0</span>
+</a>
+
+            <!-- Wishlist -->
+            <a href="wishlist.html" class="icon-link">
+              <i class="fas fa-heart fa-lg"></i>
+              <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">3</span>
+            </a>
+
+            <!-- Profile -->
+            <div class="dropdown">
+              <a href="#" class="icon-link dropdown-toggle" id="profileDropdown" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                <i class="fas fa-user-circle fa-lg"></i>
+              </a>
+               <ul class="dropdown-menu custom-dropdown dropdown-menu-end" aria-labelledby="profileDropdown">
+                <li><a class="dropdown-item" href="my-account.html"><i class="fas fa-user me-2"></i> My
+                    Account</a></li>
+                <li><a class="dropdown-item" href="my-account.html"><i class="fas fa-box me-2"></i>
+                    Orders</a></li>
+                <li><a class="dropdown-item" href="wishlist.html"><i class="fas fa-heart me-2"></i>
+                    Wishlist</a></li>
+                   <li><a class="dropdown-item" href="cart.html"><i class="fas fa-shopping-cart me-2"></i>
+                    Cart</a></li> 
+                      <li><a class="dropdown-item" href="checkout.html"><i class="fas fa-credit-card me-2"></i>
+                    Checkout</a></li> 
+
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item text-danger" href="login.html"><i class="fas fa-sign-out-alt me-2"></i>
+                    Logout</a>
+                </li>
+              </ul>
+            </div>
+
+
+            <!-- Show Login / Register with redirect back -->
+            <a href="login.html" class="btn btn-outline-primary cta-btn">
+              <i class="fas fa-sign-in-alt fa-lg me-md-2"></i> <span>Login</span>
+            </a>
+            <a href="register.html" class="btn btn-primary  cta-btn">
+              <i class="fas fa-user-plus fa-lg me-md-2"></i> <span>Register</span>
+            </a>
+
+
+
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- Navbar -->
+  <div class="main-header">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-light bg-white w-100">
+        <!-- Brand -->
+
+
+        <!-- Mobile Toggle Button -->
+        <button class="navbar-toggler d-none" type="button" data-bs-toggle="collapse"
+          data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Nav Items -->
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav ">
+            <!-- Left links -->
+
+
+            <!-- Dropdown -->
+            <li class="nav-item dropdown">
+              <a class="nav-link" href="#" id="dropdownAnkle" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                R-RELX
+              </a>
+              <div class="dropdown-menu product-dropdown" aria-labelledby="dropdownAnkle">
+                <!-- Product Feature Section -->
+                <div class="product-highlight-section">
+                  <div class="container">
+                    <div class="row align-items-center">
+                      <!-- Left: Product Info -->
+                      <div class="col-md-4 p-0">
+                        <div class="p-5">
+
+                          <h2 class="product-name">R-RELX</h2>
+                          <h3 class="product-model">Relieves spinal fatigue inch by inch </h3>
+                          <!-- Content removed for graphic use -->
+                          <a href="coming-soon.html" class="btn btn-learn-more mt-3">Buy Now</a>
+                        </div>
+                      </div>
+
+                      <!-- Right: Product Image -->
+                      <div class="col-md-8 text-center p-0">
+                        <img src="images/navbar-a39.png" class="img-fluid product-image" alt="R-RELX">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </li>
+
+         
+
+
+            <li class="nav-item dropdown">
+              <a class="nav-link" href="#" id="dropdownRovo" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                R-VELOR
+              </a>
+              <div class="dropdown-menu product-dropdown" aria-labelledby="dropdownRovo">
+
+                <!-- Product Feature Section -->
+                <div class="product-highlight-section">
+                  <div class="container">
+                    <div class="row align-items-center">
+                      <!-- Left: Product Info -->
+                      <div class="col-md-4 p-0">
+                        <div class="p-5">
+
+                          <h2 class="product-name"> R-VELOR </h2>
+                          <h3 class="product-model">Physical activity without efforts</h3>
+                          <!-- Content removed for graphic use -->
+                          <a href="r-velor.html" class="btn btn-learn-more mt-3">Buy Now</a>
+                        </div>
+                      </div>
+
+                      <!-- Right: Product Image -->
+                      <div class="col-md-8 text-center p-0">
+                        <img src="images/navbar-rt8532.png" class="img-fluid product-image" alt="R-VELOR">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+              </div>
+            </li>
+
+
+            <li class="nav-item dropdown">
+              <a class="nav-link" href="#" id="dropdownBest" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                R-ZENORA
+              </a>
+              <div class="dropdown-menu product-dropdown" aria-labelledby="dropdownBest">
+
+                <!-- Product Feature Section -->
+                <div class="product-highlight-section">
+                  <div class="container">
+                    <div class="row align-items-center">
+                      <!-- Left: Product Info -->
+                      <div class="col-md-4 p-0">
+                        <div class="p-5">
+
+                          <h2 class="product-name">R-ZENORA</h2>
+                          <h3 class="product-model">Walk without walking</h3>
+                          <!-- Content removed for graphic use -->
+                          <a href="r-zenora.html" class="btn btn-learn-more mt-3">Buy Now</a>
+                        </div>
+                      </div>
+
+                      <!-- Right: Product Image -->
+                      <div class="col-md-8 text-center p-0">
+                        <img src="images/navbar-rt8630.png" class="img-fluid product-image" alt="R-ZENORA">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+              </div>
+            </li>
+
+
+
+            <li class="nav-item dropdown">
+              <a class="nav-link " href="#" id="dropdownSmall" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                R-AUREX
+              </a>
+              <div class="dropdown-menu product-dropdown" aria-labelledby="dropdownSmall">
+
+                <!-- Product Feature Section -->
+                <div class="product-highlight-section">
+                  <div class="container">
+                    <div class="row align-items-center">
+                      <!-- Left: Product Info -->
+                      <div class="col-md-4 p-0">
+                        <div class="p-5">
+
+                          <h2 class="product-name">R-AUREX </h2>
+                          <h3 class="product-model">Lets cycle on massage chair </h3>
+                          <!-- Content removed for graphic use -->
+                          <a href="r-aurex.html" class="btn btn-learn-more mt-3">Buy Now</a>
+                        </div>
+                      </div>
+
+                      <!-- Right: Product Image -->
+                      <div class="col-md-8 text-center p-0">
+                        <img src="images/navbar-rt8802.png" class="img-fluid product-image" alt="R-AUREX">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </li>
+
+          </ul>
+
+          <ul class="navbar-nav ms-auto"> <!-- Right links -->
+
+            <li class="nav-item">
+              <a class="nav-link" href="shop.html">Shop</a>
+            </li>
+
+
+            <li class="nav-item">
+              <a class="nav-link" href="about-us.html">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="blogs.html">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact-us.html">Contact Us</a>
+            </li>
+
+          </ul>
+
+
+        </div>
+
+
+      </nav>
+    </div>
+  </div>
+
+  <!-- Mobile Menu Slide Panels including Mega Menu -->
+  <div id="carouselContainer" class="d-md-none">
+    <div class="carousel-slide" id="megaMenuSlide">
+      <span class="close-slide"> <i class="fas fa-x close-icon"></i> </span>
+
+      <div class="search-box">
+        <input type="text" placeholder="Search...">
+        <i class="fas fa-search"></i>
+      </div>
+
+
+      <div class="product-item" data-index="0">R-RELX</div>
+     
+      <div class="product-item" data-index="2">R-VELOR</div>
+      <div class="product-item" data-index="3">R-ZENORA</div>
+      <div class="product-item" data-index="4">R-AUREX</div>
+
+      <a href="shop.html" class="product-item simple-item">Shop</a>
+      <a href="about-us.html" class="product-item simple-item">About Us</a>
+      <a href="blogs.html" class="product-item simple-item">Blog</a>
+      <a href="contact-us.html" class="product-item simple-item">Contact Us</a>
+    </div>
+
+    <div class="carousel-slide" id="slide1">
+
+      <span class="close-slide"><i class="fas fa-x close-icon"></i></span>
+      <div class="card-body">
+        <h5> R-RELX </h5>
+        <img src="images/mobilenavbar-a39.webp" class="img-fluid" alt="R-RELX">
+        <p>Relieves spinal fatigue inch by inch </p>
+        <a href="coming-soon.html" class="btn btn-learn-more w-100">Buy Now</a>
+      </div>
+    </div>
+
+
+ 
+
+
+    <div class="carousel-slide" id="slide3">
+
+      <span class="close-slide"><i class="fas fa-x close-icon"></i></span>
+      <div class="card-body">
+        <h5> R-VELOR </h5>
+        <img src="images/mobilenavbar-rt8532.webp" class="img-fluid" alt="R-VELOR">
+        <p>Physical activity without efforts </p>
+        <a href="r-velor.html" class="btn btn-learn-more w-100">Buy Now</a>
+      </div>
+    </div>
+
+    <div class="carousel-slide" id="slide4">
+
+      <span class="close-slide"><i class="fas fa-x close-icon"></i></span>
+      <div class="card-body">
+        <h5> R-ZENORA </h5>
+        <img src="images/mobilenavbar-rt8630.webp" class="img-fluid" alt="R-ZENORA">
+        <p>Walk without walking </p>
+        <a href="r-zenora.html" class="btn btn-learn-more w-100">Buy Now</a>
+      </div>
+    </div>
+
+    <div class="carousel-slide" id="slide5">
+
+      <span class="close-slide"><i class="fas fa-x close-icon"></i></span>
+      <div class="card-body">
+        <h5> R-AUREX </h5>
+        <img src="images/mobilenavbar-rt8802.webp" class="img-fluid" alt="R-AUREX">
+        <p>Lets cycle on massage chair </p>
+        <a href="r-aurex.html" class="btn btn-learn-more w-100">Buy Now</a>
+      </div>
+    </div>
+
+  </div>
+
+
+
+
+  <!-- Product Detail Section -->
+  <section class="section-container pt-md-5">
+
+    <div class="container">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb bg-transparent px-0">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item"><a href="shop.html">Shop</a></li>
+          <li class="breadcrumb-item active" aria-current="page">R-ZENORA</li>
+        </ol>
+      </nav>
+    </div>
+
+
+
+    <div class="container">
+      <div class="white-card">
+        <div class="row">
+
+          <!-- Left Column - Images -->
+          <div class="col-lg-5 zoom-in">
+
+            <div class="d-flex flex-column align-items-center">
+
+              <!-- Main Image -->
+              <div class="zoom-container">
+                <img id="mainImage" src="images/R-ZENORA/col-1/rt-8630-black-1.webp" alt="Product">
+              </div>
+
+              <!-- Thumbnails -->
+              <div id="thumbnails"></div>
+
+            </div>
+
+          </div>
+
+          <!-- Right Column - Product Info -->
+          <div class="col-lg-7 mt-4 mt-lg-0   ps-lg-4">
+            <h6 class="text-muted text-uppercase">Designing of This Model</h6>
+            <h2 class="fw-bold">R-ZENORA</h2>
+
+            <!-- Ratings -->
+            <div class="mb-3">
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star-half-alt"></i>
+              <span class="text-dark">4.5 Rating</span>
+            </div>
+
+            <!-- Pricing -->
+            <div class="mb-3">
+             <span class="price">₹7,99,999</span>
+<span class="old-price">₹9,99,999</span>
+<span class="badge-discount">20% OFF</span>
+            </div>
+
+            <!-- Product Description -->
+            <p>Inspired by a soft, plus-sized “Walking Marshmallow” design, this chair combines
+              comfort with technology, featuring Zero Gravity Position and Three Rollers Under Foot to deliver soothing,
+              high-tech care and full-body relaxation.
+            </p>
+
+
+            <!-- Color Options -->
+            <div class="color-options">
+              <div class="color-circle active" style="background:#000000" onclick="loadSet('col-1', this)"
+                title="Black"></div>
+              <div class="color-circle" style="background:#ffffff" onclick="loadSet('col-2', this)" title="White"></div>
+
+            </div>
+
+
+
+
+            <!-- Product Actions -->
+            <div class="product-actions">
+              <!-- Quantity Selector -->
+              <div class="quantity-selector ">
+                <button class="btn-decrement" type="button">−</button>
+                <input type="text" value="1" min="1">
+                <button class="btn-increment" type="button">+</button>
+              </div>
+
+              <!-- Add to Cart -->
+        <a href="javascript:void(0)"
+ class="btn btn-primary add-to-cart-btn"
+ data-id="r-zenora"
+ data-name="R-ZENORA"
+ data-price="799999"
+ data-img="images/R-ZENORA/col-2/rt-8630-light-2.webp">
+ <span>Add to Cart</span>
+</a>
+              <!-- Buy Now -->
+              <a href="checkout.html" class="btn btn-buy-now">Buy Now</a>
+
+              <!-- Wishlist -->
+              <a href="wishlist.html" class="btn-wishlist"><i class="fa fa-heart"></i></a>
+            </div>
+
+            <!-- Features -->
+          
+            <div class="row text-center mt-4 border-top pt-3 g-3">
+  <div class="col-6 col-md-3">
+    <div class="product-feature-icon">
+      <i class="fa fa-cogs"></i>
+      <p class="mb-0">3D Deep Tissue Mechanism</p>
+    </div>
+  </div>
+
+  <div class="col-6 col-md-3">
+    <div class="product-feature-icon">
+      <i class="fa fa-user-circle"></i>
+      <p class="mb-0">AI Body Scan</p>
+    </div>
+  </div>
+
+  <div class="col-6 col-md-3">
+    <div class="product-feature-icon">
+      <i class="fa fa-compress"></i>
+      <p class="mb-0">36 Airbags System</p>
+    </div>
+  </div>
+
+  <div class="col-6 col-md-3">
+    <div class="product-feature-icon">
+      <i class="fa fa-space-shuttle"></i>
+      <p class="mb-0">Zero Gravity Mode</p>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+            <!-- Product Detail -->
+            <div class="mt-4">
+
+              <!-- Modern Tabs -->
+              <ul class="nav nav-tabs  detail-tab" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link active" id="returns-tab" data-bs-toggle="tab" data-bs-target="#returns"
+                    type="button" role="tab">Returns & Exchange</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="warranty-tab" data-bs-toggle="tab" data-bs-target="#warranty"
+                    type="button" role="tab">Warranty</button>
+                </li>
+              </ul>
+
+              <!-- Tab Content -->
+              <div class="tab-content tab-content-detail" id="myTabContent">
+                <!-- Returns & Exchange -->
+                <div class="tab-pane fade show active" id="returns" role="tabpanel" aria-labelledby="returns-tab">
+                <h5> <a href="return-policy.html" target="_blank">Learn more about our returns process here</a>. </h5>
+                   
+                </div>
+                <!-- Warranty -->
+                <div class="tab-pane fade" id="warranty" role="tabpanel" aria-labelledby="warranty-tab">
+                  <h5><a href="warranty.html" target="_blank">Read full policy</a>.</h5>
+                 
+                </div>
+              </div>
+
+
+            </div>
+
+
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+
+
+  <!-- Video Section -->
+  <section class="section-container pt-0 ">
+    <div class="container fade-up ">
+      <div class="row">
+        <div class="col-lg-12 ">
+          <video controls width="100%" poster="images/R-ZENORA//video/rt8630-thumbnail-vid.png">
+            <source src="images/R-ZENORA/video/RT8630.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <!-- Mechanism -->
+  <section class="section-container pt-0">
+    <div class="container">
+
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="product-section-accordion ">
+            <div class="product-accordion" id="productAccordion">
+
+              <!-- 1. Accordion -->
+              <div class="product-item-accordion fade-down">
+                <h2 class="product-header-accordion" id="heading1">
+                  <button class="product-btn" type="button" data-bs-toggle="collapse" data-bs-target="#accordion1"
+                    aria-expanded="true" aria-controls="accordion1">
+                    3D Deep Tissue Massage Mechanism
+                  </button>
+                </h2>
+                <div id="accordion1" class="product-collapse collapse show" data-bs-parent="#productAccordion">
+                  <div class="product-body">
+                    <div class="row">
+                      <div class="col-md-12 mb-4">
+                        <img src="images/R-ZENORA/detail/rt8630-graphic-01.png" alt="3D Deep Tissue Massage Mechanism" class="img-fluid tab-img">
+                      </div>
+                      <div class="col-md-12">
+                        <h2 class="mb-3">3D Deep Tissue Massage Mechanism</h2>
+                        <p>
+                          This advanced 3D deep-tissue system works like <strong> premium Japanese massage chair </strong> technology,
+                          delivering deeper penetration to relax tight muscles.
+                          Combined with a powerful waist and buttock mech, it transforms the chair into a true full body
+                          massage chair suitable for ultimate pain relief.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 2. Accordion -->
+              <div class="product-item-accordion fade-down">
+                <h2 class="product-header-accordion" id="heading2">
+                  <button class="product-btn" type="button" data-bs-toggle="collapse" data-bs-target="#accordion2"
+                    aria-expanded="true" aria-controls="accordion2">
+                    Super Long SL Track
+                  </button>
+                </h2>
+                <div id="accordion2" class="product-collapse collapse show" data-bs-parent="#productAccordion">
+                  <div class="product-body">
+                    <div class="row">
+                      <div class="col-md-12 mb-4">
+                        <img src="images/R-ZENORA/detail/rt8630-graphic-02.png" alt="Super Long SL Track" class="img-fluid tab-img">
+                      </div>
+                      <div class="col-md-12">
+                        <h2 class="mb-3">Super Long SL Track</h2>
+                        <p>
+                          The 1045 mm SL-style track follows your spine from neck to thighs, offering smooth,
+                          uninterrupted relaxation. This long-track system
+                          is commonly seen in <strong> the best massage chair in India </strong> because it enhances full-range therapy and
+                          ensures maximum
+                          comfort across every body curve.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 3. Accordion -->
+              <div class="product-item-accordion fade-down">
+                <h2 class="product-header-accordion" id="heading3">
+                  <button class="product-btn" type="button" data-bs-toggle="collapse" data-bs-target="#accordion3"
+                    aria-expanded="true" aria-controls="accordion3">
+                    AI Body Scan
+                  </button>
+                </h2>
+                <div id="accordion3" class="product-collapse collapse show" data-bs-parent="#productAccordion">
+                  <div class="product-body">
+                    <div class="row">
+                      <div class="col-md-12 mb-4">
+                        <img src="images/R-ZENORA/detail/rt8630-graphic-03.png" alt="AI Body Scan" class="img-fluid tab-img">
+                      </div>
+                      <div class="col-md-12">
+                        <h2 class="mb-3">AI Body Scan</h2>
+                        <p>
+                          Equipped with smart AI body scanning, the ZENORA chair detects shoulder height, body shape,
+                          and pressure
+                          points precisely. This ensures every massage session feels customized, just like premium
+                          Japanese <strong>  massage
+                          chairs </strong> known for accuracy and personalization, resulting in deeper relaxation and better
+                          long-term comfort.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 4. Accordion -->
+              <div class="product-item-accordion fade-down">
+                <h2 class="product-header-accordion" id="heading4">
+                  <button class="product-btn" type="button" data-bs-toggle="collapse" data-bs-target="#accordion4"
+                    aria-expanded="true" aria-controls="accordion4">
+                    Zero Gravity Position
+                  </button>
+                </h2>
+                <div id="accordion4" class="product-collapse collapse show" data-bs-parent="#productAccordion">
+                  <div class="product-body">
+                    <div class="row">
+                      <div class="col-md-12 mb-4">
+                        <img src="images/R-ZENORA/detail/rt8630-graphic-04.png" alt="Zero Gravity Position" class="img-fluid tab-img">
+                      </div>
+                      <div class="col-md-12">
+                        <h2 class="mb-3">Zero Gravity Position</h2>
+                        <p>
+                         <strong>  The zero gravity massage chair </strong> recline reduces spinal pressure, lifts your legs, and improves
+                          blood circulation instantly. This posture enhances roller depth, allowing massage chairs to
+                          deliver deeper relief. It mimics astronaut posture, making your <strong> full body massage chair </strong> more
+                          effective and therapeutic.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 5. Accordion -->
+              <div class="product-item-accordion fade-down">
+                <h2 class="product-header-accordion" id="heading5">
+                  <button class="product-btn" type="button" data-bs-toggle="collapse" data-bs-target="#accordion5"
+                    aria-expanded="true" aria-controls="accordion5">
+                    Motor Sensor Mapping
+                  </button>
+                </h2>
+                <div id="accordion5" class="product-collapse collapse show" data-bs-parent="#productAccordion">
+                  <div class="product-body">
+                    <div class="row">
+                      <div class="col-md-12 mb-4">
+                        <img src="images/R-ZENORA/detail/rt8630-graphic-05.png" alt="Motor Sensor Mapping" class="img-fluid tab-img">
+                      </div>
+                      <div class="col-md-12">
+                        <h2 class="mb-3">Motor Sensor Mapping</h2>
+                        <p>
+                          Advanced motor sensor mapping scans your entire body and adjusts roller pressure accordingly.
+                          This ensures consistent coverage from neck to feet, a trademark feature of premium massage
+                          chairs.
+                          It helps create precise, human-like massage strokes for maximum relaxation and improved daily
+                          recovery.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 6. Accordion -->
+              <div class="product-item-accordion fade-down">
+                <h2 class="product-header-accordion" id="heading6">
+                  <button class="product-btn" type="button" data-bs-toggle="collapse" data-bs-target="#accordion6"
+                    aria-expanded="true" aria-controls="accordion6">
+                    24 AUTO Massage Programs
+                  </button>
+                </h2>
+                <div id="accordion6" class="product-collapse collapse show" data-bs-parent="#productAccordion">
+                  <div class="product-body">
+                    <div class="row">
+                      <div class="col-md-12 mb-4">
+                        <img src="images/R-ZENORA/detail/rt8630-graphic-06.png" alt="24 AUTO Massage Programs" class="img-fluid tab-img">
+                      </div>
+                      <div class="col-md-12">
+                        <h2 class="mb-3">24 AUTO Massage Programs</h2>
+                        <p>
+                          The chair includes 24 intelligent auto-massage programs offering relaxation, pain relief,
+                          stretching, and
+                          wellness routines. These modes combine full body therapy techniques similar to the best
+                          massage chairs in India, giving
+                          users effortless, spa-like comfort at home with zero manual adjustments needed.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+            </div> <!-- /product-accordion -->
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Features -->
+  <section class="section-container pt-0 pb-0 features-sec">
+    <div class="container">
+
+
+      <div class="scroll-section">
+        <div class="row align-items-center">
+          <div class="col-md-4   order-2 order-md-1 slide-right">
+            <h2 class="mb-4 product-d-heading"> Auto Programs
+            </h2>
+            <p> With 24 specialized auto programs such as Baymax Hug, Thai, Chinese, Ancient, and more, this full body
+              massage chair offers diverse healing experiences. These modes replicate traditional Japanese massage chair
+              techniques, ensuring complete stress relief and professional-quality relaxation in every session.
+            </p>
+          </div>
+
+          <div class="col-md-8 order-1 order-md-2 mb-3 mb-md-0 slide-left">
+            <img src="images/R-ZENORA/detail/rt8630-graphic-07.png" alt="Auto Programs" class="img-fluid product-d-img">
+          </div>
+        </div>
+
+      </div>
+
+      <div class="scroll-section">
+        <div class="row align-items-center">
+          <div class="col-md-8 mb-3 mb-md-0 slide-right">
+            <img src="images/R-ZENORA/detail/rt8630-graphic-08.png" alt="Airbag System" class="img-fluid product-d-img">
+          </div>
+          <div class="col-md-4  slide-left">
+            <h2 class="mb-4 product-d-heading"> Airbag System </h2>
+            <p> Equipped with 36 multi-layer airbags covering the neck, shoulders, arms, waist, legs, and feet, the
+              chair delivers deep compression therapy. This feature is
+              essential in the best massage chairs in India, offering improved circulation, reduced stiffness, and
+              holistic rejuvenation from head to toe.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="scroll-section">
+        <div class="row align-items-center">
+          <div class="col-md-4   order-2 order-md-1 slide-right">
+            <h2 class="mb-4 product-d-heading"> Smart Charging
+            </h2>
+            <p> Built-in wireless charging pad and USB port allow easy device charging while you relax. This makes the
+              massage chair more convenient and modern, giving
+              users a premium experience. It blends comfort and technology, perfect for those who want a full body
+              massage chair with smart features.
+            </p>
+          </div>
+          <div class="col-md-8 order-1 order-md-2 mb-3 mb-md-0 slide-left">
+            <img src="images/R-ZENORA/detail/rt8630-graphic-09.png" alt="Smart Charging" class="img-fluid product-d-img">
+          </div>
+        </div>
+
+      </div>
+
+      <div class="scroll-section">
+        <div class="row align-items-center">
+          <div class="col-md-8 mb-3 mb-md-0 slide-right">
+            <img src="images/R-ZENORA/detail/rt8630-graphic-10.png" alt="8 Inches Touch Screen Controller" class="img-fluid product-d-img ">
+          </div>
+          <div class="col-md-4  slide-left">
+            <h2 class="mb-4 product-d-heading"> 8 Inches Touch Screen Controller
+            </h2>
+            <p> The sleek 8-inch touch screen provides effortless access to every function. Paired with Bluetooth app
+              control, it delivers smooth operation similar to
+              luxury Japanese massage chairs. This modern interface enhances every massage session, making relaxation
+              extremely easy and highly customizable.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+      <div class="scroll-section">
+        <div class="row align-items-center">
+          <div class="col-md-4  order-2 order-md-1 slide-right">
+            <h2 class="mb-4 product-d-heading"> Space-Saving Design
+            </h2>
+            <p> The wall-hugger design requires only 5 cm of clearance, allowing the chair to fit into compact rooms.
+              This makes it one of the best massage chair
+              in India options for apartments. Even with limited space, you enjoy a complete <strong> zero gravity massage chair </strong>
+              experience comfortably.
+            </p>
+          </div>
+
+          <div class="col-md-8 order-1 order-md-2 mb-3 mb-md-0 slide-left">
+            <img src="images/R-ZENORA/detail/rt8630-graphic-11.png" alt="Space-Saving Design" class="img-fluid product-d-img">
+          </div>
+        </div>
+
+      </div>
+
+      <div class="scroll-section">
+        <div class="row align-items-center">
+          <div class="col-md-8 mb-3 mb-md-0 slide-right">
+            <img src="images/R-ZENORA/detail/rt8630-graphic-12.png" alt="Premium Materials" class="img-fluid product-d-img">
+          </div>
+          <div class="col-md-4  slide-left">
+            <h2 class="mb-4 product-d-heading"> Premium Materials </h2>
+            <p> Crafted using fire-resistant plastics and advanced PU leather, the chair promises durability, comfort,
+              and safety. These premium materials give
+              it a luxurious feel similar to high-end Japanese massage chair models, making every session soothing,
+              long-lasting, and incredibly relaxing.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="scroll-section">
+        <div class="row align-items-center">
+          <div class="col-md-4  order-2 order-md-1 slide-right">
+            <h2 class="mb-4 product-d-heading"> Carbon Fiber Heat for Back
+            </h2>
+            <p> Carbon-fiber heating provides gentle, evenly distributed warmth to the back. This improves blood flow,
+              reduces stiffness, and enhances
+              the effectiveness of rollers. It's
+              a feature commonly found in full body massage chairs, offering a quiet, energy-efficient, spa-like
+              therapeutic experience every day.
+            </p>
+          </div>
+
+          <div class="col-md-8 order-1 order-md-2 mb-3 mb-md-0 slide-left">
+            <img src="images/R-ZENORA/detail/rt8630-graphic-13.png" alt="Carbon Fiber Heat for Back" class="img-fluid product-d-img">
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+
+  </section>
+
+
+  <!-- Function -->
+  <section class="section-container bg-light-primary py-5">
+    <div class="container zoom-in">
+
+      <!-- Swiper Slider -->
+      <div class="swiper bannerSwiper">
+        <div class="swiper-wrapper">
+
+          <!-- Slide 1 -->
+          <div class="swiper-slide">
+            <img src="images/R-ZENORA/detail/rt8630-graphic-14.png" alt="Three Rollers Under Foot">
+            <div class="slide-content">
+              <h3>Three Rollers Under Foot</h3>
+              <p> Three specialized rollers deliver a hand-like shiatsu and kneading experience, reducing fatigue,
+                easing soreness, and improving blood circulation. This foot
+                therapy technology is seen in the best massage chairs in India, making each session deeply relaxing and
+                perfect for daily stress relief. </p>
+            </div>
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="swiper-slide">
+            <img src="images/R-ZENORA/detail/rt8630-graphic-15.png" alt="Patented Double Acting Legrest">
+            <div class="slide-content">
+              <h3> Patented Double Acting Legrest </h3>
+              <p> The dual-extension legrest system—with 90mm upper extension and 170mm lower stretch—offers complete
+                leg support. This ensures tall and short users receive ideal comfort.
+                Many <strong> premium massage chairs </strong> lack this flexibility, making this feature extremely valuable for delivering
+                proper full-body alignment. </p>
+            </div>
+          </div>
+
+          <!-- Slide 3 -->
+          <div class="swiper-slide">
+            <img src="images/R-ZENORA/detail/rt8630-graphic-16.png" alt="Massage Techniques">
+            <div class="slide-content">
+              <h3>Massage Techniques</h3>
+              <p> Offering kneading, tapping, shiatsu, knocking, and rolling, this full body massage chair provides
+                versatile therapy options. These techniques feel similar to traditional
+                Japanese massage chair methods, ensuring deeper muscle recovery, better circulation, and improved
+                relaxation for users of all age groups. </p>
+            </div>
+          </div>
+
+          <!-- Slide 4 -->
+          <div class="swiper-slide">
+            <img src="images/R-ZENORA/detail/rt8630-graphic-17.png" alt="Zero Gravity Steps">
+            <div class="slide-content">
+              <h3>Zero Gravity Steps</h3>
+              <p> Multiple zero gravity massage chair settings elevate your legs and recline your body into a weightless
+                state. This
+                position enhances roller depth, reduces spinal load, and promotes full-body relaxation, making every
+                session
+                feel like a premium spa experience at home.</p>
+            </div>
+          </div>
+
+
+
+          <!-- Slide 5 -->
+          <div class="swiper-slide">
+            <img src="images/R-ZENORA/detail/rt8630-graphic-18.png" alt="Targeted Auto Modes">
+            <div class="slide-content">
+              <h3>Targeted Auto Modes</h3>
+              <p> These specialized programs focus on neck, shoulders, back, waist, and legs. Additional options like
+                sports, refresh, and meditation
+                modes offer wellness routines
+                for every lifestyle. This makes the <strong> ZENORA massage chair </strong>  one of the best massage chairs for personalized
+                daily therapy. </p>
+            </div>
+          </div>
+
+
+
+          <!-- Slide 6 -->
+          <div class="swiper-slide">
+            <img src="images/R-ZENORA/detail/rt8630-graphic-19.png" alt="Wireless Features">
+            <div class="slide-content">
+              <h3>Wireless Features</h3>
+              <p> Wireless phone charging and Bluetooth app connectivity bring modern convenience to every massage
+                session. These
+                features elevate the overall user experience, ensuring your <strong> full body massage chair </strong> blends technology,
+                comfort, and
+                luxury effortlessly.</p>
+            </div>
+          </div>
+
+
+
+        </div>
+
+        <!-- Swiper Controls -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+
+      </div>
+
+
+    </div>
+  </section>
+
+
+  <!-- Specifications -->
+  <section class="section-container">
+    <div class="container">
+
+      <div class="fade-down">
+
+        <div class="card card-specs">
+
+          <div class="card-header-specs">
+            <h2>Product Specifications </h2>
+
+          </div>
+
+
+
+          <div class="specs-grid">
+            <!-- LEFT: Specs Table -->
+            
+<div class="specs-left">
+              <table class="product-specs-modern">
+                <thead>
+                  <tr>
+                    <th colspan="2">Specifications</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">Product Name</th>
+                    <td>R-ZENORA</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Model</th>
+                    <td>RT8630</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Color</th>
+                    <td>Black / White  </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Rated Voltage</th>
+                    <td>220-240V </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Gross Weight / Net Weight</th>
+                    <td>182 kgs / 160 kgs</td>
+                  </tr>
+
+                  <tr>
+                    <th scope="row">Power Consumption</th>
+                    <td>200W</td>
+                  </tr>
+
+
+
+                  <tr>
+                    <th scope="row">Product Size（mm）</th>
+                    <td>Upright size: 1550*850*1200mm <br> Reclined size: 2000*850*900mm</td>
+                  </tr>
+
+
+
+                  <tr>
+                    <th scope="row">Features</th>
+                    <td>
+                      <ul class="mb-0">
+                        <li>Auto Programs</li>
+                        <li>Airbag System</li>
+                        <li>Smart Charging</li>
+                        <li>8 Inches Touch Screen Controller</li>
+                          <li>Space-Saving Design</li>
+                           <li>Premium Materials</li> 
+                           <li>Carbon Fiber Heat for Back</li> 
+                      </ul>
+                    </td>
+                  </tr>
+
+
+                  <tr>
+                    <th scope="row">Warranty</th>
+                    <td>3 Years</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Price</th>
+                    <td><strong class="price">₹7,99,999</strong></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+
+
+            <!-- RIGHT: Image + Price + CTA -->
+            <div class="specs-right">
+              <img class="table-product-image" src="images/R-ZENORA/col-2/rt-8630-light-1.webp" alt="R-ZENORA">
+
+              <div class="price-card">
+                <div>
+                  <div>Best Price</div>
+                  <div class="price">₹7,99,999</div>
+                </div>
+                <div style="min-width:110px">
+                  <button class="btn btn-primary buy-btn">Buy Now</button>
+                </div>
+              </div>
+
+              <div class="d-grid gap-2">
+                <button class="btn btn-outline-primary"><span>Add to Cart</span></button>
+                <button class="btn btn-outline-primary"><span>Add to Wishlist</span></button>
+              </div>
+
+              <div class="spec-note">
+                <strong>Note:</strong> Immediate delivery is applicable with the addition of transit time.
+              </div>
+            </div>
+          </div>
+
+
+
+        </div>
+
+
+      </div>
+
+
+    </div>
+  </section>
+
+
+
+
+
+
+
+  <!-- section  Card Product -->
+
+  <section class="section-container pt-0">
+    <div class="container">
+
+      <h2 class="mb-4 mb-md-5  text-center fade-up">You may also like</h2>
+
+
+
+
+      <div class="row g-3">
+
+    
+
+
+        
+
+        <div class="col-md-6 col-lg-3 fade-up">
+
+          <div class="product-card ">
+            <a href="r-velor.html" class="product-link">
+              <div class="product-image-wrapper">
+                <span class="badge-top">BEST SELLER</span>
+
+                <!-- Static Image (default) -->
+                <img src="images/R-VELOR/col-1/rt-8532-browndark-3.webp" alt="R-VELOR" class="static-img">
+
+                <!-- GIF Image (on hover) -->
+                <img src="images/R-VELOR/col-1/rt-8532-browndark-5.webp" alt="R-VELOR" class="gif-img">
+              </div>
+
+              <h5 class="product-title">R-VELOR</h5>
+              <p class="product-price">₹9,99,999</p>
+            </a>
+
+            <!-- Hover Buttons -->
+            <div class="action-buttons">
+              <button class="btn  add-to-wishlist-btn">
+                <i class="fas fa-heart"></i> <span> Wishlist </span>
+              </button>
+              <button class="btn  add-to-cart-btn"  href="javascript:void(0)"
+
+data-id="r-velor"
+data-name="R-VELOR"
+data-price="999999"
+data-img="images/R-VELOR/col-1/rt-8532-browndark-1.webp">
+                <i class="fas fa-cart-plus"></i> <span> Add to Cart </span>
+              </button>
+            </div>
+          </div>
+
+
+        </div>
+
+
+
+
+        <div class="col-md-6 col-lg-3 fade-up">
+          <div class="product-card ">
+            <a href="r-aurex.html" class="product-link">
+              <div class="product-image-wrapper">
+                <span class="badge-top">BEST SELLER</span>
+
+                <!-- Static Image (default) -->
+                <img src="images/R-AUREX/col-1/rt-8802-whitegray-2.webp" alt="R-AUREX" class="static-img">
+
+                <!-- GIF Image (on hover) -->
+                <img src="images/R-AUREX/col-1/rt-8802-whitegray-7.webp" alt="R-AUREX" class="gif-img">
+              </div>
+
+              <h5 class="product-title">R-AUREX</h5>
+              <p class="product-price">₹7,99,999</p>
+            </a>
+
+            <!-- Hover Buttons -->
+            <div class="action-buttons">
+              <button class="btn  add-to-wishlist-btn">
+                <i class="fas fa-heart"></i> <span> Wishlist </span>
+              </button>
+              <button class="btn  add-to-cart-btn"  href="javascript:void(0)"
+
+data-id="r-aurex"
+data-name="R-AUREX"
+data-price="799999"
+data-img="images/R-AUREX/col-1/rt-8802-whitegray-10.webp">
+                <i class="fas fa-cart-plus"></i> <span> Add to Cart </span>
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+
+
+      </div>
+
+    </div>
+  </section>
+
+
+
+
+
+
+  <!-- Footer -->
+
+  <footer class="footer-main">
+
+    <div class="container ">
+
+      <div class="contact-wrapper" tabindex="0">
+        <svg xmlns="http://www.w3.org/2000/svg" class="contact-icon" fill="none" viewBox="0 0 24 24"
+          stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false">
+          <path stroke-linecap="round" stroke-linejoin="round"
+            d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+        </svg>
+
+        <h2 class="contact-title">Have Questions or Concerns?</h2>
+        <p class="contact-subtitle">We’re here to help! Call us anytime.</p>
+        <a href="tel:919799979739" class="contact-btn"> +91-97999-79739 </a>
+      </div>
+
+    </div>
+
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 footer-logo">
+
+          <a href="index.html">
+            <img src="images/rotai-logo.png" alt="Rotai Logo">
+          </a>
+
+
+          <h5 class="fw-bold mb-2 text-white">Subscribe to our Newsletter</h5>
+          <p>Stay updated with the latest innovations, wellness tips, and exclusive Rotai offers—delivered straight to
+            your inbox.</p>
+
+          <form class="newsletter-form">
+            <input type="email" placeholder="Enter your email address" required="">
+            <button type="submit">
+              Subscribe <i class="fas fa-paper-plane"></i>
+            </button>
+          </form>
+
+        </div>
+
+        <div class="col-md-2 footer-links">
+          <h6>Products</h6>
+          <ul>
+            <li><a href="coming-soon.html">R-RELX</a></li>
+            
+            <li><a href="r-velor.html">R-VELOR</a></li>
+            <li><a href="r-zenora.html">R-ZENORA</a></li>
+
+            <li><a href="r-aurex.html">R-AUREX</a></li>
+            <li><a href="shop.html">View All Products</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-2 footer-links">
+          <h6>Company</h6>
+          <ul>
+            <li><a href="about-us.html">About Us</a></li>
+            <li><a href="media.html">Media</a></li>
+            <li><a href="blogs.html">Blog</a></li>
+            <li><a href="contact-us.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-2 footer-links">
+          <h6>Support</h6>
+          <ul>
+            <li><a href="my-account.html">My Account</a></li>
+            <li><a href="faq.html">FAQs</a></li>
+
+          </ul>
+        </div>
+
+        <div class="col-md-2 footer-links">
+          <h6>Legal</h6>
+          <ul>
+            <li><a href="terms-of-use.html">Terms of Use</a></li>
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="refund-policy.html"> Refund Policy </a></li>
+            <li><a href="return-policy.html"> Return Policy </a></li>
+            <li><a href="shipping-policy.html">Shipping Policy</a></li>
+            <li><a href="warranty.html">Warranty</a></li>
+
+
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="row footer-bottom mt-3 mt-md-5 align-items-center">
+        <div class="col-md-6 text-center text-md-start mb-2 mb-md-0">
+          <p class="mb-0"> © 2025 Rotai. All rights reserved. Powered by <a href="https://humancarei.com/"
+              target="_blank"> HCI</a> </p>
+        </div>
+        <div class="col-md-6 text-center text-md-end">
+          <div class="social-icons">
+            <a href="https://www.facebook.com/humancareinternational" target="_blank" class="mx-1"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://x.com/humancarei" target="_blank" class="mx-1"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="https://www.instagram.com/hci_massagechair?igsh=MXA0cTN0d2txMjF3Nw==" target="_blank" class="mx-1"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.youtube.com/channel/UC8OMz5bklRKBt2xyykh7kqg" target="_blank" class="mx-1"><i class="fab fa-youtube"></i></a>
+          </div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+
+ <!-- Add to cart Success Alrt  -->
+
+<div class="toast-container position-fixed top-0 end-0 p-3">
+<div id="myToast" class="toast align-items-center text-bg-success border-0" role="alert">
+<div class="d-flex">
+<div class="toast-body">
+✅ Item added to cart
+</div>
+<button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button>
+</div>
+</div>
+</div>
+
+
+<!-- Add to cart sidebar  -->
+
+
+<div class="cart-overlay"></div>
+
+
+<div class="cart-sidebar">
+  <div class="cart-header">
+    <h5>Your Cart</h5>
+   <button class="close-slide" id="close-slidebar">
+<i class="fa fa-close"></i>
+</button>
+  </div>
+
+  <div class="cart-body">
+    <div class="table-responsive">
+      <table class="table align-middle">
+      <tbody id="cart-items"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="cart-footer">
+
+    <div class="d-flex justify-content-between fw-bold mb-2">
+      <span>Total</span>
+      <span>₹95,998</span>
+    </div>
+
+
+
+<div class="d-flex gap-2">
+
+     <a href="cart.html" class="btn btn-primary w-100">
+     View Basket
+    </a>
+
+    <a href="checkout.html" class="btn btn-primary w-100">
+       Checkout
+    </a>
+
+    </div>
+
+
+  </div>
+</div>
+
+
+
+  <!-- Bootstrap Bundle JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Detail Img Zoom / Color Option-->
+  <script>
+    // Product image sets
+    const productImages = {
+      "col-1": [
+        "images/R-ZENORA/col-1/rt-8630-black-2.webp",
+        "images/R-ZENORA/col-1/rt-8630-black-1.webp",
+        "images/R-ZENORA/col-1/rt-8630-black-3.webp",
+        "images/R-ZENORA/col-1/rt-8630-black-4.webp"
+      ],
+      "col-2": [
+        "images/R-ZENORA/col-2/rt-8630-light-2.webp",
+        "images/R-ZENORA/col-2/rt-8630-light-1.webp",
+        "images/R-ZENORA/col-2/rt-8630-light-3.webp",
+        "images/R-ZENORA/col-2/rt-8630-light-4.webp"
+      ]
+    };
+
+    const mainImage = document.getElementById("mainImage");
+    const thumbnails = document.getElementById("thumbnails");
+
+    // Load thumbnails by color set
+    function loadSet(set, circle) {
+      // update color active
+      document.querySelectorAll(".color-circle").forEach(c => c.classList.remove("active"));
+      circle.classList.add("active");
+
+      thumbnails.innerHTML = "";
+      productImages[set].forEach((src, i) => {
+        const img = document.createElement("img");
+        img.src = src;
+        img.className = "thumbnail-img" + (i === 0 ? " active" : "");
+        img.onclick = () => changeImage(img);
+        thumbnails.appendChild(img);
+        if (i === 0) mainImage.src = src;
+      });
+    }
+
+    // Change main image on thumbnail click
+    function changeImage(el) {
+      mainImage.src = el.src;
+      document.querySelectorAll(".thumbnail-img").forEach(t => t.classList.remove("active"));
+      el.classList.add("active");
+    }
+
+    // Zoom effect
+    const zoomContainer = document.querySelector('.zoom-container');
+    zoomContainer.addEventListener("mousemove", e => {
+      const rect = zoomContainer.getBoundingClientRect();
+      const x = ((e.clientX - rect.left) / rect.width) * 100;
+      const y = ((e.clientY - rect.top) / rect.height) * 100;
+      mainImage.style.transformOrigin = `${x}% ${y}%`;
+      mainImage.style.transform = "scale(2)";
+    });
+    zoomContainer.addEventListener("mouseleave", () => {
+      mainImage.style.transform = "scale(1)";
+    });
+
+    // Load default set
+    loadSet("col-1", document.querySelector(".color-circle.active"));
+  </script>
+
+  <!-- Qty Button -->
+  <script src="js/qtybutton.js"></script>
+  <!-- Mobile Menu -->
+  <script src="js/mobilemenu.js"></script>
+  <!-- Animate Scroll JS -->
+  <script src="js/animatescroll.js"></script>
+  <!-- Product Slider JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <script src="js/productslider.js"></script>
+
+
+    <!-- Product Add to Cart JS -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="js/addtocart.js"></script>
+
+  <!-- Cart Sidebar Add to Cart JS -->
+  <script src="js/cartsidebar.js"></script>
+
+
+</body>
+
+</html>

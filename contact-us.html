@@ -536,54 +536,114 @@ Koramangala, Bengaluru, Karnataka 560047, India
 
 <div class="col-md-6 order-1 order-md-2">
 
-<div class="appointment-wrapper">
+<div class="contact-form slide-left">
+<h3 class="mb-4"><i class="fas fa-paper-plane me-2 text-orange"></i>Send Us a Message</h3>
 
-<!-- Appointment Card -->
-<a class="appointment-card" href="bookings.html">
-<div class="appointment-icon">
-<i class="fa-regular fa-calendar-days"></i>
-</div>
-<p class="appointment-title">Book Your Appointment</p>
-<p class="appointment-subtitle">Pick a date that works for you</p>
-<span class="appointment-button">Schedule Now</span>
-</a>
 
-<!-- Stats -->
-<div class="stats-grid">
+<form id="contactForm" action="#" method="post">
+  <div class="row">
+    
+    <!-- Name -->
+    <div class="col-md-6">
+      <div class="form-group">
+        <label for="name" class="form-label">
+          Name <span class="text-danger">*</span>
+        </label>
+        <input
+          type="text"
+          class="form-control"
+          id="name"
+          name="name"
+          placeholder="Enter your name"
+          required
+        />
+      </div>
+    </div>
 
-<div class="stat-card">
-<div class="stat-icon">
-<i class="fa-regular fa-clock"></i>
-</div>
-<div class="stat-number">25+</div>
-<div class="stat-text">Years of Experience</div>
-</div>
+    <!-- Email -->
+    <div class="col-md-6">
+      <div class="form-group">
+        <label for="email" class="form-label">
+          Email <span class="text-danger">*</span>
+        </label>
+        <input
+          type="email"
+          class="form-control"
+          id="email"
+          name="email"
+          placeholder="Enter your email"
+          required
+        />
+      </div>
+    </div>
 
-<div class="stat-card">
-<div class="stat-icon">
-<i class="fa-regular fa-user"></i>
-</div>
-<div class="stat-number">500+</div>
-<div class="stat-text">Happy Clients</div>
-</div>
+    <!-- Phone -->
+    <div class="col-md-6">
+      <div class="form-group">
+        <label for="phone" class="form-label">
+          Phone Number <span class="text-danger">*</span>
+        </label>
 
-<div class="stat-card">
-<div class="stat-icon">
-<i class="fa-solid fa-check"></i>
-</div>
-<div class="stat-number">98%</div>
-<div class="stat-text">Satisfaction</div>
-</div>
+        <div class="input-group">
+          <span class="input-group-text">🇮🇳 +91</span>
+          <input
+            type="tel"
+            class="form-control"
+            id="phone"
+            name="phone"
+            placeholder="Enter your phone number"
+            maxlength="15"
+            pattern="[6-9][0-9]{9}"
+            required
+          />
+        </div>
+      </div>
+    </div>
 
-<div class="stat-card">
-<div class="stat-icon">
-<i class="fa-solid fa-award"></i>
-</div>
-<div class="stat-number">10+</div>
-<div class="stat-text">Certifications</div>
-</div>
+    <!-- Location -->
+    <div class="col-md-6">
+      <div class="form-group">
+        <label for="location" class="form-label">
+          Location <span class="text-danger">*</span>
+        </label>
+        <input
+          type="text"
+          class="form-control"
+          id="location"
+          name="location"
+          placeholder="Enter your location"
+          required
+        />
+      </div>
+    </div>
 
-</div>
+    <!-- Message -->
+    <div class="col-12">
+      <div class="form-group">
+        <label for="message" class="form-label">
+          Message <span class="text-danger">*</span>
+        </label>
+        <textarea
+          class="form-control"
+          id="message"
+          name="message"
+          rows="5"
+          placeholder="Write your message"
+          required
+        ></textarea>
+      </div>
+    </div>
+
+    <!-- Button -->
+    <div class="col-12">
+      <button type="submit" class="btn btn-primary d-block w-100">
+        Send Message
+      </button>
+    </div>
+
+  </div>
+</form>
+
 
 </div>
 
@@ -1264,6 +1324,11 @@ class="btn whatsapp" target="_blank">
 
 <!-- Deals Floting  Scroll JS -->
 <script src="js/dealsfloting.js"></script>
+
+<!-- Contact Form JS -->
+<script src="js/contact-form.js"></script>
+
+
 
 </body>
 

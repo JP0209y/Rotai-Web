@@ -443,11 +443,16 @@ rel="stylesheet">
 
 <!-- Hero Banner -->
 
+
 <div class="entry-header zoom-in">
 <div class="container">
 <h1>  Book Appointment </h1>
 </div>
 </div>
+
+
+
+
 
 
 
@@ -471,10 +476,13 @@ Book your appointment in a few simple steps: choose a service, pick your date & 
 
 <div class="row g-4 align-items-stretch">
 
+ 
   <!-- Product Demo -->
   <div class="col-md-4">
     <div class="field-box">
-      <div class="field-icon"><i class="fa-solid fa-couch"></i></div>
+      <div class="field-icon">
+        <i class="fa-solid fa-couch"></i>
+      </div>
       <div class="field-content">
         <h6 id="product-demo-value">Product Demo</h6>
         <p>Product Demo - 30 mins</p>
@@ -485,105 +493,110 @@ Book your appointment in a few simple steps: choose a service, pick your date & 
   <!-- Appointment Date -->
   <div class="col-md-4">
     <div class="field-box appointment-control">
-      <div class="field-icon"><i class="fa-regular fa-calendar"></i></div>
-      <div class="field-content ">
-     
-        <input type="date" class="form-control" id="appointment-date">
+      <div class="field-icon">
+        <i class="fa-regular fa-calendar"></i>
+      </div>
+      <div class="field-content">
+        <input 
+          type="date" 
+          class="form-control" 
+          id="appointment-date" 
+          required>
       </div>
     </div>
   </div>
 
+  <!-- Location Slot -->
+  <div class="col-md-4">
+    <div class="field-box dropdown location-dropdown">
+      <div class="field-icon">
+        <i class="fa-solid fa-location-dot"></i>
+      </div>
 
-<!-- Location Slot -->
-<div class="col-md-4">
-  <div class="field-box dropdown location-dropdown">
-    <div class="field-icon">
-      <i class="fa-solid fa-location-dot"></i>
-    </div>
+      <div class="field-content">
+        <h6 id="timezone-value">Select Our Location</h6>
+      </div>
 
-    <div class="field-content">
-      <h6 id="timezone-value"> Select Our Location</h6>
-    </div>
+      <i class="fa-solid fa-chevron-down dropdown-arrow"></i>
 
-    <i class="fa-solid fa-chevron-down dropdown-arrow"></i>
-
-    <div class="dropdown-menu">
-      <ul>
-        <li onclick="selectLocation(this, event)">📍 Dubai Bazar, Jaipur </li>
-        <li onclick="selectLocation(this, event)">📍 Cinepolis, Jaipur</li>
-        <li onclick="selectLocation(this, event)">📍 Bais Godam, Jaipur</li>
-        <li onclick="selectLocation(this, event)">📍 Airport, Udaipur</li>
-        <li onclick="selectLocation(this, event)">📍 VR Mall, Surat</li>
-        <li onclick="selectLocation(this, event)">📍 Citywalk Mall, Delhi </li>
-        <li onclick="selectLocation(this, event)">📍 Kanki highstreet Mall, Raipur </li>
-        <li onclick="selectLocation(this, event)">📍 Pheonix Pallasio Mall, Lucknow </li>
-        <li onclick="selectLocation(this, event)">📍 Rajiv Gandhi International Airport, Hyderabad </li>
-        <li onclick="selectLocation(this, event)">📍 CITY CENTER MALL, Nashik </li>
-        <li onclick="selectLocation(this, event)">📍 Elante Mall,  Chandigarh </li>
-        <li onclick="selectLocation(this, event)">📍 CENTRIO MALL,  Dehradun </li>
-        <li onclick="selectLocation(this, event)">📍 Inorbit Mall,   Malad </li>
-        <li onclick="selectLocation(this, event)">📍 Viviana Mall,   Thane </li>
-        <li onclick="selectLocation(this, event)">📍 Inorbit Mall,   Vashi</li>
-        <li onclick="selectLocation(this, event)">📍 Dynamix Mall,  Juhu   </li>
-        <li onclick="selectLocation(this, event)">📍 Gaur City Mall, Noida   </li>
-        <li onclick="selectLocation(this, event)">📍 Royal Meenakshi Mall,  Bengaluru   </li>
-        <li onclick="selectLocation(this, event)">📍 Ashok Nagar,   Bengaluru   </li>
-        <li onclick="selectLocation(this, event)">📍 Koramangala Inner Road, Bengaluru   </li>
-        <li onclick="selectLocation(this, event)">📍 Phoenix Citadel Mall,   Indore   </li>
-     
-      </ul>
-    </div>
-  </div>
-</div>
-
-<!-- Time Slot -->
-<div class="col-md-4">
-  <div class="field-box dropdown time-control">
-    <div class="field-icon"><i class="fa-regular fa-clock"></i></div>
-
-    <div class="field-content">
-      <h6 id="time-value">Select Time</h6>
-    </div>
-
-    <i class="fa-solid fa-chevron-down dropdown-arrow"></i>
-
-    <div class="dropdown-menu">
-	<!-- Morning -->
-	 <h6 class="p-2 border-bottom">Morning</h6>
-      <ul>
-        <li onclick="selectTime(this, event)">10:00 AM</li>
-        <li onclick="selectTime(this, event)">10:45 AM</li>
-        <li onclick="selectTime(this, event)">11:30 AM</li>
-      </ul>
-	
-	<!-- Afternoon -->
-      <h6 class="p-2 border-bottom">Afternoon</h6>
-      <ul>
-        <li onclick="selectTime(this, event)">12:45 PM</li>
-        <li onclick="selectTime(this, event)">1:30 PM</li>
-        <li onclick="selectTime(this, event)">2:15 PM</li>
-		<li onclick="selectTime(this, event)">3:00 PM</li>
-		<li onclick="selectTime(this, event)">4:45 PM</li>
-		<li onclick="selectTime(this, event)">5:30 PM</li>
-      </ul>
-
-  <!-- Evening -->
-  <h6 class="p-2 border-bottom">Evening</h6>
-  <ul>
-    <li onclick="selectTime(this, event)">6:15 PM</li>
-    <li onclick="selectTime(this, event)">7:00 PM</li>
-  
-  </ul>
-
+      <div class="dropdown-menu">
+        <ul>
+          <li onclick="selectLocation(this, event)">📍 Dubai Bazar, Jaipur</li>
+          <li onclick="selectLocation(this, event)">📍 Cinepolis, Jaipur</li>
+          <li onclick="selectLocation(this, event)">📍 Bais Godam, Jaipur</li>
+          <li onclick="selectLocation(this, event)">📍 Airport, Udaipur</li>
+          <li onclick="selectLocation(this, event)">📍 VR Mall, Surat</li>
+          <li onclick="selectLocation(this, event)">📍 Citywalk Mall, Delhi</li>
+          <li onclick="selectLocation(this, event)">📍 Kanki highstreet Mall, Raipur</li>
+          <li onclick="selectLocation(this, event)">📍 Pheonix Pallasio Mall, Lucknow</li>
+          <li onclick="selectLocation(this, event)">📍 Rajiv Gandhi International Airport, Hyderabad</li>
+          <li onclick="selectLocation(this, event)">📍 CITY CENTER MALL, Nashik</li>
+          <li onclick="selectLocation(this, event)">📍 Elante Mall, Chandigarh</li>
+          <li onclick="selectLocation(this, event)">📍 CENTRIO MALL, Dehradun</li>
+          <li onclick="selectLocation(this, event)">📍 Inorbit Mall, Malad</li>
+          <li onclick="selectLocation(this, event)">📍 Viviana Mall, Thane</li>
+          <li onclick="selectLocation(this, event)">📍 Inorbit Mall, Vashi</li>
+          <li onclick="selectLocation(this, event)">📍 Dynamix Mall, Juhu</li>
+          <li onclick="selectLocation(this, event)">📍 Gaur City Mall, Noida</li>
+          <li onclick="selectLocation(this, event)">📍 Royal Meenakshi Mall, Bengaluru</li>
+          <li onclick="selectLocation(this, event)">📍 Ashok Nagar, Bengaluru</li>
+          <li onclick="selectLocation(this, event)">📍 Koramangala Inner Road, Bengaluru</li>
+          <li onclick="selectLocation(this, event)">📍 Phoenix Citadel Mall, Indore</li>
+        </ul>
+      </div>
     </div>
   </div>
-</div>
 
+  <!-- Time Slot -->
+  <div class="col-md-4">
+    <div class="field-box dropdown time-control">
+      <div class="field-icon">
+        <i class="fa-regular fa-clock"></i>
+      </div>
 
+      <div class="field-content">
+        <h6 id="time-value">Select Time</h6>
+      </div>
+
+      <i class="fa-solid fa-chevron-down dropdown-arrow"></i>
+
+      <div class="dropdown-menu">
+
+        <h6 class="p-2 border-bottom">Morning</h6>
+        <ul>
+          <li onclick="selectTime(this, event)">10:00 AM</li>
+          <li onclick="selectTime(this, event)">10:45 AM</li>
+          <li onclick="selectTime(this, event)">11:30 AM</li>
+        </ul>
+
+        <h6 class="p-2 border-bottom">Afternoon</h6>
+        <ul>
+          <li onclick="selectTime(this, event)">12:45 PM</li>
+          <li onclick="selectTime(this, event)">1:30 PM</li>
+          <li onclick="selectTime(this, event)">2:15 PM</li>
+          <li onclick="selectTime(this, event)">3:00 PM</li>
+          <li onclick="selectTime(this, event)">4:45 PM</li>
+          <li onclick="selectTime(this, event)">5:30 PM</li>
+        </ul>
+
+        <h6 class="p-2 border-bottom">Evening</h6>
+        <ul>
+          <li onclick="selectTime(this, event)">6:15 PM</li>
+          <li onclick="selectTime(this, event)">7:00 PM</li>
+        </ul>
+
+      </div>
+    </div>
+  </div>
 
   <!-- Book Button -->
   <div class="col-md-4">
-    <button class="w-100 btn btn-primary h-100 " data-bs-toggle="modal" data-bs-target="#bookappointmentModal">Book Appointment</button>
+    <button 
+      type="button"
+      id="openAppointmentModalBtn"
+      class="w-100 btn btn-primary h-100">
+      Book Appointment
+    </button>
   </div>
 
 </div>
@@ -601,6 +614,7 @@ Book your appointment in a few simple steps: choose a service, pick your date & 
 </section>
 
 
+
 <!-- Book Appointment Modal -->
 
 <div class="modal fade" id="bookappointmentModal" tabindex="-1" aria-hidden="true">
@@ -613,8 +627,19 @@ Book your appointment in a few simple steps: choose a service, pick your date & 
         <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
       </div>
 
+     <!-- Body -->
+    
       <!-- Body -->
-      <div class="modal-body">
+      <form method="post" action="/book-appointment/">
+        
+        <input type="hidden" name="csrfmiddlewaretoken" value="4btUGDisjiaoSgv0hFNh4eOgRUMw03f0PRVTcbt4kkYdNc7TgerKQmX0VYEBy9NT">
+        <input type="hidden" name="location" id="input-location">
+        <input type="hidden" name="product" id="input-product">
+        <input type="hidden" name="appointment_date" id="input-date">
+        <input type="hidden" name="appointment_time" id="input-time">
+
+        <div class="modal-body">
+
 
 
 
@@ -658,25 +683,33 @@ Book your appointment in a few simple steps: choose a service, pick your date & 
 
         <div class="form-group">
           <label class="form-label">Name <span class="text-danger">*</span></label>
-          <input type="text" class="form-control" placeholder="Name">
+          <input type="text" class="form-control" name="name" placeholder="Name" required>
         </div>
 
         <div class="form-group">
           <label class="form-label">Email <span class="text-danger">*</span></label>
-          <input type="email" class="form-control" placeholder="Email">
+          <input type="email" class="form-control" name="email" placeholder="Email" required>
         </div>
 
         <div class="form-group">
           <label class="form-label">Contact Number <span class="text-danger">*</span></label>
           <div class="input-group">
             <span class="input-group-text">🇮🇳 +91</span>
-            <input type="tel" class="form-control" placeholder="Contact Number">
+           <input type="tel"
+       class="form-control"
+       name="phone"
+       placeholder="Contact Number"
+       maxlength="15"
+       required>
+            
           </div>
         </div>
 
-        <button class="btn btn-primary w-100">Confirm Appointment</button>
+        <button id="appointmentSubmitBtn" class="btn btn-primary w-100">Confirm Appointment</button>
 
       </div>
+    </form>
+
 
     </div>
   </div>
@@ -876,6 +909,7 @@ Book your appointment in a few simple steps: choose a service, pick your date & 
 
  <!-- support btn menu Scroll JS -->
   <script src="js/supportbtnmenu.js"></script>
+  
  <!-- Back to Top Scroll JS -->
   <script src="js/backtotop.js"></script>
 

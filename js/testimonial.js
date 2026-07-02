@@ -1,5 +1,6 @@
-const testimonialSwiper = new Swiper('.testimonials-slider', {
-  effect: 'coverflow',
+// Testimonials Slider
+const testimonialSwiper = new Swiper(".testimonials-slider", {
+  effect: "coverflow",
   grabCursor: true,
   centeredSlides: true,
   slidesPerView: 1,
@@ -7,7 +8,7 @@ const testimonialSwiper = new Swiper('.testimonials-slider', {
   spaceBetween: 30,
 
   autoplay: {
-    delay: 3000,          // 3 seconds
+    delay: 3000,
     disableOnInteraction: false,
     pauseOnMouseEnter: true,
   },
@@ -21,17 +22,62 @@ const testimonialSwiper = new Swiper('.testimonials-slider', {
   },
 
   navigation: {
-    nextEl: '.testimonials-next',
-    prevEl: '.testimonials-prev',
+    nextEl: ".testimonials-next",
+    prevEl: ".testimonials-prev",
   },
 
   pagination: {
-    el: '.testimonials-pagination',
+    el: ".testimonials-pagination",
     clickable: true,
   },
 
   breakpoints: {
-    768: { slidesPerView: 2 },
-    1200: { slidesPerView: 3 }
-  }
+    768: {
+      slidesPerView: 2,
+    },
+    1200: {
+      slidesPerView: 3,
+    },
+  },
+});
+
+
+// Customer Reviews Slider
+const customerReviewSwiper = new Swiper(".customer-review-slider", {
+  slidesPerView: 1,
+  loop: true,
+  spaceBetween: 30,
+  grabCursor: true,
+  speed: 700,
+
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false,
+    pauseOnMouseEnter: true,
+  },
+
+  navigation: {
+    nextEl: ".customer-review-next",
+    prevEl: ".customer-review-prev",
+  },
+
+  pagination: {
+    el: ".customer-review-pagination",
+    clickable: true,
+  },
+
+  breakpoints: {
+    0: {
+      slidesPerView: 1,
+    },
+    768: {
+      slidesPerView: 1,
+    },
+    992: {
+      slidesPerView: 2,
+    },
+    1200: {
+      slidesPerView: 2,
+    },
+  },
 });
