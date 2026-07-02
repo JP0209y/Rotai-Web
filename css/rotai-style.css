@@ -3324,15 +3324,12 @@ div#thumbnails {
 /*---------------------*/
 
 .customer-review-slider {
-  max-width: 960px;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 20px 60px 60px;
   overflow: hidden;
 }
 
 .customer-review-slider .swiper-wrapper {
   align-items: stretch;
+   
 }
 
 .customer-review-slider .swiper-slide {
