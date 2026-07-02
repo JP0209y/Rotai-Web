@@ -43,6 +43,8 @@ const testimonialSwiper = new Swiper(".testimonials-slider", {
 
 
 // Customer Reviews Slider
+
+// Customer Reviews Slider
 document.addEventListener("DOMContentLoaded", function () {
   const customerSlider = document.querySelector(".customer-review-slider");
 
@@ -53,14 +55,17 @@ document.addEventListener("DOMContentLoaded", function () {
       spaceBetween: 30,
       grabCursor: true,
       speed: 700,
+
       watchOverflow: false,
       observer: true,
       observeParents: true,
+      loopAdditionalSlides: 4,
 
       autoplay: {
         delay: 3000,
         disableOnInteraction: false,
         pauseOnMouseEnter: false,
+        stopOnLastSlide: false,
       },
 
       navigation: {
@@ -87,8 +92,12 @@ document.addEventListener("DOMContentLoaded", function () {
           slidesPerView: 3,
         },
       },
-    });
 
-    customerReviewSwiper.autoplay.start();
+      on: {
+        init: function () {
+          this.autoplay.start();
+        },
+      },
+    });
   }
 });

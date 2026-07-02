@@ -3374,6 +3374,7 @@ div#thumbnails {
   justify-content: space-between;
   gap: 16px;
   margin-bottom: 24px;
+  flex-direction: column;
 }
 
 .customer-profile {
